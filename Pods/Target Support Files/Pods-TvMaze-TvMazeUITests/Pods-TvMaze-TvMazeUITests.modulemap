@@ -1,0 +1,6 @@
+framework module Pods_TvMaze_TvMazeUITests {
+  umbrella header "Pods-TvMaze-TvMazeUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
