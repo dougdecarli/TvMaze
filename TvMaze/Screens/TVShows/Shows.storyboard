@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uff-Br-G7c">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--TV Shows-->
+        <scene sceneID="dh4-Kj-fuH">
+            <objects>
+                <navigationController id="uff-Br-G7c" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="TV Shows" image="tv" catalog="system" id="abb-f1-iEH"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="dU8-Vc-Da6">
+                        <rect key="frame" x="0.0" y="47" width="390" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="rpL-ze-Blu" kind="relationship" relationship="rootViewController" id="Vm3-Z8-69w"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZuX-0s-klm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1332" y="-1873"/>
+        </scene>
+        <!--TV Shows-->
+        <scene sceneID="8uo-w0-jDm">
+            <objects>
+                <viewController title="TV Shows" id="rpL-ze-Blu" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PCg-E0-Byq">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="MsA-kN-NEk">
+                                <rect key="frame" x="0.0" y="91" width="390" height="719"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <searchBar key="tableFooterView" contentMode="redraw" id="q5y-VB-tjq">
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="rpL-ze-Blu" id="7Rg-P2-mWs"/>
+                                    </connections>
+                                </searchBar>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="8ZR-JV-q6Y"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8ZR-JV-q6Y" firstAttribute="bottom" secondItem="MsA-kN-NEk" secondAttribute="bottom" id="0VV-sR-JTg"/>
+                            <constraint firstItem="8ZR-JV-q6Y" firstAttribute="trailing" secondItem="MsA-kN-NEk" secondAttribute="trailing" id="X1x-R7-RMt"/>
+                            <constraint firstItem="MsA-kN-NEk" firstAttribute="leading" secondItem="8ZR-JV-q6Y" secondAttribute="leading" id="b6q-pW-3ac"/>
+                            <constraint firstItem="MsA-kN-NEk" firstAttribute="top" secondItem="8ZR-JV-q6Y" secondAttribute="top" id="fPQ-Aw-D96"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="TV Shows" image="tv" catalog="system" id="dGN-5Q-Y0T"/>
+                    <navigationItem key="navigationItem" id="VP5-PZ-Hpa"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wqx-AP-W0E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2083" y="-1872"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tv" catalog="system" width="128" height="95"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

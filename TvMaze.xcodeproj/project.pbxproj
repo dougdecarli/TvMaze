@@ -8,9 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		485A843B2FC88B7EF6A394AD /* Pods_TvMazeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0375D36F72029B5597446137 /* Pods_TvMazeTests.framework */; };
+		4B09D4272991C99300E01DE7 /* TvMazeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B09D4262991C99300E01DE7 /* TvMazeService.swift */; };
+		4B09D42A2991CEEC00E01DE7 /* TvMazeShowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B09D4292991CEEC00E01DE7 /* TvMazeShowModel.swift */; };
+		4B66D4092991D56100963444 /* Shows.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B66D4082991D56100963444 /* Shows.storyboard */; };
+		4B66D40C2991D6BF00963444 /* TvMazeStarter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B66D40B2991D6BF00963444 /* TvMazeStarter.swift */; };
+		4B66D40E2991D6F100963444 /* ShowsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B66D40D2991D6F100963444 /* ShowsRouter.swift */; };
+		4B66D4102991DA9300963444 /* TvMazeShowListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B66D40F2991DA9300963444 /* TvMazeShowListViewController.swift */; };
+		4B66D4122991DAA000963444 /* TvMazeShowListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B66D4112991DAA000963444 /* TvMazeShowListViewModel.swift */; };
+		4B66D4162991DB2A00963444 /* TvMazeViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B66D4152991DB2A00963444 /* TvMazeViewModelProtocol.swift */; };
+		4B66D4182991DB3B00963444 /* TvMazeViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B66D4172991DB3B00963444 /* TvMazeViewControllerProtocol.swift */; };
+		4B66D41A2991DB4900963444 /* TvMazeLoadableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B66D4192991DB4900963444 /* TvMazeLoadableViewModel.swift */; };
+		4B66D41C2991DB5700963444 /* TvMazeBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B66D41B2991DB5700963444 /* TvMazeBaseViewController.swift */; };
+		4B66D41E2991DB6100963444 /* TvMazeBaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B66D41D2991DB6100963444 /* TvMazeBaseViewModel.swift */; };
 		4BDD70DA2991C203001FA9D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDD70D92991C203001FA9D6 /* AppDelegate.swift */; };
-		4BDD70DC2991C203001FA9D6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDD70DB2991C203001FA9D6 /* SceneDelegate.swift */; };
-		4BDD70DE2991C203001FA9D6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDD70DD2991C203001FA9D6 /* ViewController.swift */; };
 		4BDD70E12991C203001FA9D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BDD70DF2991C203001FA9D6 /* Main.storyboard */; };
 		4BDD70E32991C205001FA9D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BDD70E22991C205001FA9D6 /* Assets.xcassets */; };
 		4BDD70E62991C205001FA9D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BDD70E42991C205001FA9D6 /* LaunchScreen.storyboard */; };
@@ -41,10 +51,20 @@
 /* Begin PBXFileReference section */
 		0375D36F72029B5597446137 /* Pods_TvMazeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TvMazeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		13C51A093B2CFA853EAEC78F /* Pods-TvMaze.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TvMaze.debug.xcconfig"; path = "Target Support Files/Pods-TvMaze/Pods-TvMaze.debug.xcconfig"; sourceTree = "<group>"; };
+		4B09D4262991C99300E01DE7 /* TvMazeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvMazeService.swift; sourceTree = "<group>"; };
+		4B09D4292991CEEC00E01DE7 /* TvMazeShowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvMazeShowModel.swift; sourceTree = "<group>"; };
+		4B66D4082991D56100963444 /* Shows.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Shows.storyboard; sourceTree = "<group>"; };
+		4B66D40B2991D6BF00963444 /* TvMazeStarter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvMazeStarter.swift; sourceTree = "<group>"; };
+		4B66D40D2991D6F100963444 /* ShowsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowsRouter.swift; sourceTree = "<group>"; };
+		4B66D40F2991DA9300963444 /* TvMazeShowListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvMazeShowListViewController.swift; sourceTree = "<group>"; };
+		4B66D4112991DAA000963444 /* TvMazeShowListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvMazeShowListViewModel.swift; sourceTree = "<group>"; };
+		4B66D4152991DB2A00963444 /* TvMazeViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvMazeViewModelProtocol.swift; sourceTree = "<group>"; };
+		4B66D4172991DB3B00963444 /* TvMazeViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvMazeViewControllerProtocol.swift; sourceTree = "<group>"; };
+		4B66D4192991DB4900963444 /* TvMazeLoadableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvMazeLoadableViewModel.swift; sourceTree = "<group>"; };
+		4B66D41B2991DB5700963444 /* TvMazeBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvMazeBaseViewController.swift; sourceTree = "<group>"; };
+		4B66D41D2991DB6100963444 /* TvMazeBaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvMazeBaseViewModel.swift; sourceTree = "<group>"; };
 		4BDD70D62991C203001FA9D6 /* TvMaze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TvMaze.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BDD70D92991C203001FA9D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4BDD70DB2991C203001FA9D6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4BDD70DD2991C203001FA9D6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4BDD70E02991C203001FA9D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4BDD70E22991C205001FA9D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4BDD70E52991C205001FA9D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -91,6 +111,86 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4B09D4252991C84800E01DE7 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				4B09D4262991C99300E01DE7 /* TvMazeService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		4B09D4282991CEDC00E01DE7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4B09D4292991CEEC00E01DE7 /* TvMazeShowModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4B09D42B2991D30300E01DE7 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				4BDD70DF2991C203001FA9D6 /* Main.storyboard */,
+				4B09D42C2991D32D00E01DE7 /* TVShows */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		4B09D42C2991D32D00E01DE7 /* TVShows */ = {
+			isa = PBXGroup;
+			children = (
+				4B66D4082991D56100963444 /* Shows.storyboard */,
+				4B66D4072991D54A00963444 /* ShowsList */,
+			);
+			path = TVShows;
+			sourceTree = "<group>";
+		};
+		4B66D4072991D54A00963444 /* ShowsList */ = {
+			isa = PBXGroup;
+			children = (
+				4B66D40F2991DA9300963444 /* TvMazeShowListViewController.swift */,
+				4B66D4112991DAA000963444 /* TvMazeShowListViewModel.swift */,
+			);
+			path = ShowsList;
+			sourceTree = "<group>";
+		};
+		4B66D40A2991D6AA00963444 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				4B66D41F2991DDAE00963444 /* Shows */,
+				4B66D40B2991D6BF00963444 /* TvMazeStarter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		4B66D4132991DAF400963444 /* BaseProtocols */ = {
+			isa = PBXGroup;
+			children = (
+				4B66D4142991DB1A00963444 /* Protocols */,
+				4B66D41B2991DB5700963444 /* TvMazeBaseViewController.swift */,
+				4B66D41D2991DB6100963444 /* TvMazeBaseViewModel.swift */,
+			);
+			path = BaseProtocols;
+			sourceTree = "<group>";
+		};
+		4B66D4142991DB1A00963444 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				4B66D4152991DB2A00963444 /* TvMazeViewModelProtocol.swift */,
+				4B66D4172991DB3B00963444 /* TvMazeViewControllerProtocol.swift */,
+				4B66D4192991DB4900963444 /* TvMazeLoadableViewModel.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		4B66D41F2991DDAE00963444 /* Shows */ = {
+			isa = PBXGroup;
+			children = (
+				4B66D40D2991D6F100963444 /* ShowsRouter.swift */,
+			);
+			path = Shows;
+			sourceTree = "<group>";
+		};
 		4BDD70CD2991C202001FA9D6 = {
 			isa = PBXGroup;
 			children = (
@@ -116,10 +216,12 @@
 		4BDD70D82991C203001FA9D6 /* TvMaze */ = {
 			isa = PBXGroup;
 			children = (
+				4B66D4132991DAF400963444 /* BaseProtocols */,
+				4B09D4282991CEDC00E01DE7 /* Models */,
+				4B09D4252991C84800E01DE7 /* Network */,
+				4B66D40A2991D6AA00963444 /* Router */,
+				4B09D42B2991D30300E01DE7 /* Screens */,
 				4BDD70D92991C203001FA9D6 /* AppDelegate.swift */,
-				4BDD70DB2991C203001FA9D6 /* SceneDelegate.swift */,
-				4BDD70DD2991C203001FA9D6 /* ViewController.swift */,
-				4BDD70DF2991C203001FA9D6 /* Main.storyboard */,
 				4BDD70E22991C205001FA9D6 /* Assets.xcassets */,
 				4BDD70E42991C205001FA9D6 /* LaunchScreen.storyboard */,
 				4BDD70E72991C205001FA9D6 /* Info.plist */,
@@ -164,7 +266,6 @@
 				9A03FB72DC26E0B69B5ADCA7 /* Pods-TvMazeTests.debug.xcconfig */,
 				C808180CEF5E463913A32FD2 /* Pods-TvMazeTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -281,6 +382,7 @@
 				4BDD70E62991C205001FA9D6 /* LaunchScreen.storyboard in Resources */,
 				4BDD70E32991C205001FA9D6 /* Assets.xcassets in Resources */,
 				4BDD70E12991C203001FA9D6 /* Main.storyboard in Resources */,
+				4B66D4092991D56100963444 /* Shows.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,9 +527,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4BDD70DE2991C203001FA9D6 /* ViewController.swift in Sources */,
+				4B66D40E2991D6F100963444 /* ShowsRouter.swift in Sources */,
+				4B66D41A2991DB4900963444 /* TvMazeLoadableViewModel.swift in Sources */,
 				4BDD70DA2991C203001FA9D6 /* AppDelegate.swift in Sources */,
-				4BDD70DC2991C203001FA9D6 /* SceneDelegate.swift in Sources */,
+				4B66D4102991DA9300963444 /* TvMazeShowListViewController.swift in Sources */,
+				4B66D41C2991DB5700963444 /* TvMazeBaseViewController.swift in Sources */,
+				4B09D4272991C99300E01DE7 /* TvMazeService.swift in Sources */,
+				4B66D41E2991DB6100963444 /* TvMazeBaseViewModel.swift in Sources */,
+				4B66D40C2991D6BF00963444 /* TvMazeStarter.swift in Sources */,
+				4B66D4182991DB3B00963444 /* TvMazeViewControllerProtocol.swift in Sources */,
+				4B66D4162991DB2A00963444 /* TvMazeViewModelProtocol.swift in Sources */,
+				4B09D42A2991CEEC00E01DE7 /* TvMazeShowModel.swift in Sources */,
+				4B66D4122991DAA000963444 /* TvMazeShowListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -609,7 +720,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TvMaze/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -638,7 +749,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TvMaze/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
