@@ -6,3 +6,61 @@
 //
 
 import Foundation
+import UIKit
+import RxSwift
+import RxCocoa
+
+class PeopleListViewController: TvMazeBaseViewController<PeopleListViewModel> {
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
+    
+    private let emptyMessageLabel: UILabel = {
+        $0.translatesAutoresizingMaskIntoConstraints = false
+        $0.font = .systemFont(ofSize: 16)
+        $0.text = "Search for people"
+        return $0
+    }(UILabel())
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupViewModel()
+        setupTableViewCells()
+        bind()
+    }
+    
+    private func setupViewModel() {
+        let router = PeopleRouter(navigationController: navigationController ?? UINavigationController())
+        viewModel = PeopleListViewModel(router: router,
+                                        service: TvMazePeopleService())
+    }
+    
+    override func bindInputs() {
+        super.bindInputs()
+        
+        searchBar.rx.text.orEmpty
+            .bind(to: viewModel.searchBarTextField)
+            .disposed(by: disposeBag)
+        
+        viewModel.peopleCells
+            .map { $0.count == 0 }
+            .bind(to: tableView.rx.isHidden)
+            .disposed(by: disposeBag)
+    }
+    
+    override func bindOutputs() {
+        super.bindOutputs()
+        
+        viewModel
+            .peopleCells
+            .bind(to: tableView.rx.items(cellIdentifier: PeopleTableViewCell.identifier,
+                                         cellType: PeopleTableViewCell.self)) { (row, element, cell) in
+                cell.bind(person: element)
+            }.disposed(by: disposeBag)
+    }
+    
+    private func setupTableViewCells() {
+        tableView.register(UINib(nibName: PeopleTableViewCell.nibName,
+                                 bundle: .main),
+                           forCellReuseIdentifier: PeopleTableViewCell.identifier)
+    }
+}
