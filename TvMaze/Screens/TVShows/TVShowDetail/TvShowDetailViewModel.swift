@@ -16,7 +16,8 @@ class TvShowDetailViewModel: TvMazeBaseViewModel<ShowsRouterProtocol> {
     
     private let episodesSeasonSection = BehaviorRelay<[ShowDetailsSectionModel]>(value: [])
     
-    let onViewWillAppear = PublishRelay<Void>()
+    let onViewWillAppear = PublishRelay<Void>(),
+        onEpisodeSelected = PublishRelay<ShowDetailCellsDataSource>()
     
     var isLoaderShowing = PublishSubject<Bool>()
     var episodeSeasonCells: Observable<[ShowDetailsSectionModel]> {
@@ -34,13 +35,14 @@ class TvShowDetailViewModel: TvMazeBaseViewModel<ShowsRouterProtocol> {
     override func setupBindings() {
         super.setupBindings()
         setupOnViewWillAppear()
+        setupOnEpisodeSelected()
     }
     
     //MARK: Input
     private func setupOnViewWillAppear() {
         onViewWillAppear
             .do(onNext: { [weak self] in
-                self?.startLoader()
+//                self?.startLoader()
                 self?.addHeaderCell()
             })
             .subscribe(onNext: { [weak self] in
@@ -49,7 +51,17 @@ class TvShowDetailViewModel: TvMazeBaseViewModel<ShowsRouterProtocol> {
             .disposed(by: disposeBag)
     }
     
-    //MARK: Output
+    private func setupOnEpisodeSelected() {
+        onEpisodeSelected
+            .subscribe { [weak self] cellSelected in
+                switch cellSelected {
+                case .episodes(let model):
+                    self?.router.goToEpisodeDetail(episode: model)
+                default: break
+                }
+            }
+            .disposed(by: disposeBag)
+    }
     
     //MARK: Service
     private func getEpisodes() {

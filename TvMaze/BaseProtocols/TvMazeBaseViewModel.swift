@@ -10,13 +10,10 @@ import RxSwift
 
 class TvMazeBaseViewModel<Router>: TvMazeViewModelProtocol {
     var disposeBag = DisposeBag(),
-        router: Router,
-        service: TvMazeServiceProtocol
+        router: Router
     
-    init(router: Router,
-         service: TvMazeServiceProtocol) {
+    init(router: Router) {
         self.router = router
-        self.service = service
     }
     
     open func setupBindings() {}

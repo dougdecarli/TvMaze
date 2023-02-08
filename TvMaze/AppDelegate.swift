@@ -16,6 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         TvMazeStarter.startFlow(window: window)
         window?.makeKeyAndVisible()
         window?.tintColor = .systemRed
+        if #available(iOS 13.0, *) {
+            window?.overrideUserInterfaceStyle = .dark
+        }
         return true
     }
 }

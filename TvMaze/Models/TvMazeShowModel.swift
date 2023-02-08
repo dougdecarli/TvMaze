@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Differentiator
 
 struct ShowModel: Decodable {
     var id: Int
@@ -14,7 +15,16 @@ struct ShowModel: Decodable {
     var schedule: Schedule
     var genres: [String]
     var summary: String?
-    var image: ShowImage
+    var image: Image?
+//    var episodesBySeason: [Int: [Episode]] = [:]
+//    var seasonKeys: [Int] {
+//        episodesBySeason.keys.sorted()
+//    }
+}
+
+struct SearchedShow: Decodable {
+    let score: Double
+    let show: ShowModel
 }
 
 struct Schedule: Decodable {
@@ -22,16 +32,31 @@ struct Schedule: Decodable {
     var days: [String]
 }
 
-struct ShowImage: Decodable {
+struct Image: Decodable, Hashable, IdentifiableType, Equatable {
     let medium: String
     let original: String
+    
+    var identity: UUID {
+        return UUID()
+    }
+    typealias Identity = UUID
 }
 
-struct Episode: Decodable {
-    public var id: Int
-    public var name: String
-    public var number: Int
-    public var season: Int
-    public var summary: String?
-    public var image: URL?
+struct Episode: Decodable, Hashable, IdentifiableType, Equatable {
+    let id: Int
+    let name: String
+    let number: Int
+    let season: Int
+    let summary: String?
+    let image: Image?
+    
+    var identity: UUID {
+        return UUID()
+    }
+    typealias Identity = UUID
+}
+
+struct Season: Decodable {
+    let season: Int
+    let episodes: [Episode]
 }

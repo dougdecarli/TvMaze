@@ -35,6 +35,12 @@ class TvShowDetailViewController: TvMazeBaseViewController<TvShowDetailViewModel
             .map { _ in }
             .bind(to: viewModel.onViewWillAppear)
             .disposed(by: disposeBag)
+        
+        episodesTableView
+            .rx
+            .modelSelected(ShowDetailCellsDataSource.self)
+            .bind(to: viewModel.onEpisodeSelected)
+            .disposed(by: disposeBag)
     }
     
     override func bindOutputs() {

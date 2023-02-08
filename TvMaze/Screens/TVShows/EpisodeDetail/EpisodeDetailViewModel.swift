@@ -6,3 +6,20 @@
 //
 
 import Foundation
+import RxSwift
+import RxCocoa
+
+class EpisodeDetailViewModel: TvMazeBaseViewModel<ShowsRouterProtocol> {
+    //MARK: Properties
+    let episode: Episode
+    
+    init(router: ShowsRouterProtocol,
+         episode: Episode) {
+        self.episode = episode
+        super.init(router: router)
+    }
+    
+    override func setupBindings() {
+        super.setupBindings()
+    }
+}

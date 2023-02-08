@@ -24,6 +24,6 @@ class ShowListTableViewCell: UITableViewCell {
     func bind(model: ShowModel) {
         genresLabel.text = model.genres.joined(separator: ", ")
         titleLabel.text = model.name
-        posterImageView.loadImage(imageURL: model.image.medium, genericImage: UIImage())
+        posterImageView.loadImage(imageURL: model.image?.medium ?? "", genericImage: UIImage())
     }
 }

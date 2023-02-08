@@ -64,3 +64,5 @@ class TvMazeBaseViewController<ViewModel: TvMazeViewModelProtocol>: UIViewContro
     
     open override var preferredStatusBarStyle: UIStatusBarStyle { return .lightContent }
 }
+
+extension TvMazeBaseViewController: TvMazeViewControllerProtocol {}
