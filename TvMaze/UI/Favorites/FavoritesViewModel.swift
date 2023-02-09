@@ -37,6 +37,7 @@ class FavoritesViewModel: TvMazeBaseViewModel<FavoriteRouterProtocol> {
     
     //MARK: Outputs
     private func getFavorites() {
-        tvShowCells.accept(favoriteManager.getAllFavoriteShows())
+        let favorites = favoriteManager.getAllFavoriteShows()
+        tvShowCells.accept(favorites.sorted { $0.name < $1.name })
     }
 }
