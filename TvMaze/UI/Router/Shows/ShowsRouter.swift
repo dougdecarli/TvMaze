@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 protocol ShowsRouterProtocol {
-    func goToTvShowDetail(tvShow: ShowModel, service: TvMazeShowServiceProtocol)
+    func goToTvShowDetail(tvShow: ShowModel, service: TvMazeServiceProtocol)
     func goToEpisodeDetail(episode: Episode)
 }
 
@@ -21,7 +21,7 @@ class ShowsRouter: ShowsRouterProtocol {
         self.navigationController = navigationController
     }
     
-    func goToTvShowDetail(tvShow: ShowModel, service: TvMazeShowServiceProtocol) {
+    func goToTvShowDetail(tvShow: ShowModel, service: TvMazeServiceProtocol) {
         guard let vc = showsStoryboard.instantiateViewController(withIdentifier: "tvShowDetail") as? TvShowDetailViewController else { return }
         vc.viewModel = TvShowDetailViewModel(router: self,
                                              service: service,

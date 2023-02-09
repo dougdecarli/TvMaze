@@ -13,7 +13,6 @@
 		4B030D8729949556000AE3AD /* FavoritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B030D8629949556000AE3AD /* FavoritesViewModel.swift */; };
 		4B030D8A29949586000AE3AD /* FavoriteRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B030D8929949586000AE3AD /* FavoriteRouter.swift */; };
 		4B030D8E29949800000AE3AD /* FavoritesUserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B030D8D29949800000AE3AD /* FavoritesUserDefaultsManager.swift */; };
-		4B09D4272991C99300E01DE7 /* TvMazeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B09D4262991C99300E01DE7 /* TvMazeService.swift */; };
 		4B09D42A2991CEEC00E01DE7 /* TvMazeShowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B09D4292991CEEC00E01DE7 /* TvMazeShowModel.swift */; };
 		4B4C88522992A5AD0042558D /* ShowDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4C88502992A5AD0042558D /* ShowDetailTableViewCell.swift */; };
 		4B4C88532992A5AD0042558D /* ShowDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B4C88512992A5AD0042558D /* ShowDetailTableViewCell.xib */; };
@@ -47,6 +46,16 @@
 		4BAC2F14299359C600BE64E6 /* PeopleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BAC2F12299359C600BE64E6 /* PeopleTableViewCell.xib */; };
 		4BAC2F172993EA2800BE64E6 /* PersonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAC2F162993EA2800BE64E6 /* PersonDetailViewController.swift */; };
 		4BAC2F192993EA3100BE64E6 /* PersonDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAC2F182993EA3100BE64E6 /* PersonDetailViewModel.swift */; };
+		4BDC9F1C29954A8A00CCB8B3 /* TvMazeServiceShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC9F0F29954A8A00CCB8B3 /* TvMazeServiceShow.swift */; };
+		4BDC9F1D29954A8A00CCB8B3 /* TvMazeBaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC9F1029954A8A00CCB8B3 /* TvMazeBaseService.swift */; };
+		4BDC9F1E29954A8A00CCB8B3 /* ServiceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC9F1229954A8A00CCB8B3 /* ServiceRequest.swift */; };
+		4BDC9F1F29954A8A00CCB8B3 /* GetPagedShowsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC9F1429954A8A00CCB8B3 /* GetPagedShowsRequest.swift */; };
+		4BDC9F2029954A8A00CCB8B3 /* GetPeopleRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC9F1529954A8A00CCB8B3 /* GetPeopleRequest.swift */; };
+		4BDC9F2129954A8A00CCB8B3 /* GetEpisodesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC9F1629954A8A00CCB8B3 /* GetEpisodesRequest.swift */; };
+		4BDC9F2229954A8A00CCB8B3 /* GetShowsByPersonRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC9F1729954A8A00CCB8B3 /* GetShowsByPersonRequest.swift */; };
+		4BDC9F2329954A8A00CCB8B3 /* SearchTvShowsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC9F1829954A8A00CCB8B3 /* SearchTvShowsRequest.swift */; };
+		4BDC9F2429954A8A00CCB8B3 /* RequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC9F1A29954A8A00CCB8B3 /* RequestFactory.swift */; };
+		4BDC9F2529954A8A00CCB8B3 /* TvMazeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC9F1B29954A8A00CCB8B3 /* TvMazeService.swift */; };
 		4BDD70DA2991C203001FA9D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDD70D92991C203001FA9D6 /* AppDelegate.swift */; };
 		4BDD70E12991C203001FA9D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BDD70DF2991C203001FA9D6 /* Main.storyboard */; };
 		4BDD70E32991C205001FA9D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BDD70E22991C205001FA9D6 /* Assets.xcassets */; };
@@ -84,7 +93,6 @@
 		4B030D8629949556000AE3AD /* FavoritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewModel.swift; sourceTree = "<group>"; };
 		4B030D8929949586000AE3AD /* FavoriteRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRouter.swift; sourceTree = "<group>"; };
 		4B030D8D29949800000AE3AD /* FavoritesUserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesUserDefaultsManager.swift; sourceTree = "<group>"; };
-		4B09D4262991C99300E01DE7 /* TvMazeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvMazeService.swift; sourceTree = "<group>"; };
 		4B09D4292991CEEC00E01DE7 /* TvMazeShowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvMazeShowModel.swift; sourceTree = "<group>"; };
 		4B4C88502992A5AD0042558D /* ShowDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailTableViewCell.swift; sourceTree = "<group>"; };
 		4B4C88512992A5AD0042558D /* ShowDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShowDetailTableViewCell.xib; sourceTree = "<group>"; };
@@ -118,6 +126,16 @@
 		4BAC2F12299359C600BE64E6 /* PeopleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PeopleTableViewCell.xib; sourceTree = "<group>"; };
 		4BAC2F162993EA2800BE64E6 /* PersonDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailViewController.swift; sourceTree = "<group>"; };
 		4BAC2F182993EA3100BE64E6 /* PersonDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailViewModel.swift; sourceTree = "<group>"; };
+		4BDC9F0F29954A8A00CCB8B3 /* TvMazeServiceShow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TvMazeServiceShow.swift; sourceTree = "<group>"; };
+		4BDC9F1029954A8A00CCB8B3 /* TvMazeBaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TvMazeBaseService.swift; sourceTree = "<group>"; };
+		4BDC9F1229954A8A00CCB8B3 /* ServiceRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceRequest.swift; sourceTree = "<group>"; };
+		4BDC9F1429954A8A00CCB8B3 /* GetPagedShowsRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetPagedShowsRequest.swift; sourceTree = "<group>"; };
+		4BDC9F1529954A8A00CCB8B3 /* GetPeopleRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetPeopleRequest.swift; sourceTree = "<group>"; };
+		4BDC9F1629954A8A00CCB8B3 /* GetEpisodesRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetEpisodesRequest.swift; sourceTree = "<group>"; };
+		4BDC9F1729954A8A00CCB8B3 /* GetShowsByPersonRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetShowsByPersonRequest.swift; sourceTree = "<group>"; };
+		4BDC9F1829954A8A00CCB8B3 /* SearchTvShowsRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTvShowsRequest.swift; sourceTree = "<group>"; };
+		4BDC9F1A29954A8A00CCB8B3 /* RequestFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestFactory.swift; sourceTree = "<group>"; };
+		4BDC9F1B29954A8A00CCB8B3 /* TvMazeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TvMazeService.swift; sourceTree = "<group>"; };
 		4BDD70D62991C203001FA9D6 /* TvMaze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TvMaze.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BDD70D92991C203001FA9D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4BDD70E02991C203001FA9D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -185,14 +203,6 @@
 			path = FavoriteRouter;
 			sourceTree = "<group>";
 		};
-		4B030D8B299497BF000AE3AD /* Network */ = {
-			isa = PBXGroup;
-			children = (
-				4B09D4262991C99300E01DE7 /* TvMazeService.swift */,
-			);
-			path = Network;
-			sourceTree = "<group>";
-		};
 		4B030D8C299497C8000AE3AD /* Local */ = {
 			isa = PBXGroup;
 			children = (
@@ -201,13 +211,13 @@
 			path = Local;
 			sourceTree = "<group>";
 		};
-		4B09D4252991C84800E01DE7 /* Data */ = {
+		4B09D4252991C84800E01DE7 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				4BDC9F0E29954A8A00CCB8B3 /* Network */,
 				4B030D8C299497C8000AE3AD /* Local */,
-				4B030D8B299497BF000AE3AD /* Network */,
 			);
-			path = Data;
+			path = Service;
 			sourceTree = "<group>";
 		};
 		4B09D4282991CEDC00E01DE7 /* Models */ = {
@@ -403,6 +413,48 @@
 			path = PersonDetail;
 			sourceTree = "<group>";
 		};
+		4BDC9F0E29954A8A00CCB8B3 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				4BDC9F1129954A8A00CCB8B3 /* ServiceRequest */,
+				4BDC9F0F29954A8A00CCB8B3 /* TvMazeServiceShow.swift */,
+				4BDC9F1029954A8A00CCB8B3 /* TvMazeBaseService.swift */,
+				4BDC9F1B29954A8A00CCB8B3 /* TvMazeService.swift */,
+			);
+			name = Network;
+			path = ../../../Network;
+			sourceTree = "<group>";
+		};
+		4BDC9F1129954A8A00CCB8B3 /* ServiceRequest */ = {
+			isa = PBXGroup;
+			children = (
+				4BDC9F1229954A8A00CCB8B3 /* ServiceRequest.swift */,
+				4BDC9F1329954A8A00CCB8B3 /* Requests */,
+				4BDC9F1929954A8A00CCB8B3 /* Factory */,
+			);
+			path = ServiceRequest;
+			sourceTree = "<group>";
+		};
+		4BDC9F1329954A8A00CCB8B3 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				4BDC9F1429954A8A00CCB8B3 /* GetPagedShowsRequest.swift */,
+				4BDC9F1529954A8A00CCB8B3 /* GetPeopleRequest.swift */,
+				4BDC9F1629954A8A00CCB8B3 /* GetEpisodesRequest.swift */,
+				4BDC9F1729954A8A00CCB8B3 /* GetShowsByPersonRequest.swift */,
+				4BDC9F1829954A8A00CCB8B3 /* SearchTvShowsRequest.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		4BDC9F1929954A8A00CCB8B3 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				4BDC9F1A29954A8A00CCB8B3 /* RequestFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
 		4BDD70CD2991C202001FA9D6 = {
 			isa = PBXGroup;
 			children = (
@@ -431,7 +483,7 @@
 				4B66D4272991EE4400963444 /* Extensions */,
 				4B66D4132991DAF400963444 /* BaseProtocols */,
 				4B09D4282991CEDC00E01DE7 /* Models */,
-				4B09D4252991C84800E01DE7 /* Data */,
+				4B09D4252991C84800E01DE7 /* Service */,
 				4B09D42B2991D30300E01DE7 /* UI */,
 				4BDD70D92991C203001FA9D6 /* AppDelegate.swift */,
 				4BDD70E22991C205001FA9D6 /* Assets.xcassets */,
@@ -750,31 +802,40 @@
 				4BAC2F13299359C600BE64E6 /* PeopleTableViewCell.swift in Sources */,
 				4BAC2F0A299353E600BE64E6 /* PeopleListViewModel.swift in Sources */,
 				4B66D4292991EE5200963444 /* UIImageViewExtensions.swift in Sources */,
+				4BDC9F2329954A8A00CCB8B3 /* SearchTvShowsRequest.swift in Sources */,
+				4BDC9F1E29954A8A00CCB8B3 /* ServiceRequest.swift in Sources */,
 				4B66D40E2991D6F100963444 /* ShowsRouter.swift in Sources */,
 				4BAC2EFF2992DEAA00BE64E6 /* String+DecodingExtension.swift in Sources */,
+				4BDC9F1F29954A8A00CCB8B3 /* GetPagedShowsRequest.swift in Sources */,
+				4BDC9F1C29954A8A00CCB8B3 /* TvMazeServiceShow.swift in Sources */,
 				4BAC2F042992EA9A00BE64E6 /* EpisodeDetailViewController.swift in Sources */,
 				4BAC2F0D2993541000BE64E6 /* PeopleRouter.swift in Sources */,
 				4B4C88522992A5AD0042558D /* ShowDetailTableViewCell.swift in Sources */,
 				4B66D41A2991DB4900963444 /* TvMazeLoadableViewModel.swift in Sources */,
 				4BDD70DA2991C203001FA9D6 /* AppDelegate.swift in Sources */,
+				4BDC9F2029954A8A00CCB8B3 /* GetPeopleRequest.swift in Sources */,
 				4BAC2F172993EA2800BE64E6 /* PersonDetailViewController.swift in Sources */,
 				4B4C88572992DAA10042558D /* ShowDetailCellsDataSource.swift in Sources */,
 				4B66D4102991DA9300963444 /* TvMazeShowListViewController.swift in Sources */,
 				4B4C88552992B2360042558D /* Reactive+UIViewController.swift in Sources */,
 				4B030D8A29949586000AE3AD /* FavoriteRouter.swift in Sources */,
 				4B030D8729949556000AE3AD /* FavoritesViewModel.swift in Sources */,
+				4BDC9F2529954A8A00CCB8B3 /* TvMazeService.swift in Sources */,
 				4B66D41C2991DB5700963444 /* TvMazeBaseViewController.swift in Sources */,
+				4BDC9F2429954A8A00CCB8B3 /* RequestFactory.swift in Sources */,
 				4BAC2F022992EA8C00BE64E6 /* EpisodeDetailViewModel.swift in Sources */,
-				4B09D4272991C99300E01DE7 /* TvMazeService.swift in Sources */,
 				4B66D41E2991DB6100963444 /* TvMazeBaseViewModel.swift in Sources */,
 				4B66D40C2991D6BF00963444 /* TvMazeStarter.swift in Sources */,
 				4B66D4182991DB3B00963444 /* TvMazeViewControllerProtocol.swift in Sources */,
 				4BAC2EFC2992DC3200BE64E6 /* ShowDetailHeaderTableViewCell.swift in Sources */,
 				4B66D4162991DB2A00963444 /* TvMazeViewModelProtocol.swift in Sources */,
 				4BF9CDE329952AE000DCE25C /* Reactive+UITableViewCell.swift in Sources */,
+				4BDC9F1D29954A8A00CCB8B3 /* TvMazeBaseService.swift in Sources */,
+				4BDC9F2229954A8A00CCB8B3 /* GetShowsByPersonRequest.swift in Sources */,
 				4B030D8E29949800000AE3AD /* FavoritesUserDefaultsManager.swift in Sources */,
 				4BAC2F192993EA3100BE64E6 /* PersonDetailViewModel.swift in Sources */,
 				4B66D42C29921BD300963444 /* TvShowDetailViewController.swift in Sources */,
+				4BDC9F2129954A8A00CCB8B3 /* GetEpisodesRequest.swift in Sources */,
 				4B09D42A2991CEEC00E01DE7 /* TvMazeShowModel.swift in Sources */,
 				4B66D4122991DAA000963444 /* TvMazeShowListViewModel.swift in Sources */,
 				4B030D852994954E000AE3AD /* FavoritesViewController.swift in Sources */,

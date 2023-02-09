@@ -31,7 +31,7 @@ class PeopleListViewController: TvMazeBaseViewController<PeopleListViewModel> {
     private func setupViewModel() {
         let router = PeopleRouter(navigationController: navigationController ?? UINavigationController())
         viewModel = PeopleListViewModel(router: router,
-                                        service: TvMazePeopleService())
+                                        service: TvMazeService())
     }
     
     override func bindInputs() {

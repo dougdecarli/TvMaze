@@ -37,7 +37,6 @@ class ShowListTableViewCell: UITableViewCell {
             .disposed(by: rx.disposeBag)
         
         viewModel.isShowFavorited
-            .debug("favorite")
             .map { $0 ? UIImage.init(systemName: "heart.fill") : UIImage.init(systemName: "heart") }
             .bind(to: favoriteButton.rx.image())
             .disposed(by: rx.disposeBag)

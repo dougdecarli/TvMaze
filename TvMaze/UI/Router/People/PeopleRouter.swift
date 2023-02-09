@@ -9,7 +9,7 @@ import UIKit
 
 protocol PeopleRouterProtocol {
     func goToPersonDetail(person: Person,
-                          service: TvMazePeopleServiceProtocol)
+                          service: TvMazeServiceProtocol)
 }
 
 class PeopleRouter: PeopleRouterProtocol {
@@ -21,7 +21,7 @@ class PeopleRouter: PeopleRouterProtocol {
     }
     
     func goToPersonDetail(person: Person,
-                          service: TvMazePeopleServiceProtocol) {
+                          service: TvMazeServiceProtocol) {
         guard let vc = peopleStoryboard.instantiateViewController(withIdentifier: "personDetailVc") as? PersonDetailViewController else { return }
         vc.viewModel = PersonDetailViewModel(router: self,
                                              person: person,

@@ -11,7 +11,7 @@ import RxCocoa
 class TvShowDetailViewModel: TvMazeBaseViewModel<ShowsRouterProtocol> {
     //MARK: Properties
     private let tvShowModel: ShowModel,
-                service: TvMazeShowServiceProtocol
+                service: TvMazeServiceProtocol
     
     private let episodesSeasonSection = BehaviorRelay<[ShowDetailsSectionModel]>(value: [])
     
@@ -24,7 +24,7 @@ class TvShowDetailViewModel: TvMazeBaseViewModel<ShowsRouterProtocol> {
     }
     
     init(router: ShowsRouterProtocol,
-         service: TvMazeShowServiceProtocol,
+         service: TvMazeServiceProtocol,
          tvShowModel: ShowModel) {
         self.tvShowModel = tvShowModel
         self.service = service

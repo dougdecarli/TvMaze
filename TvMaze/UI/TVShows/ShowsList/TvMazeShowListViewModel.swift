@@ -11,7 +11,7 @@ import RxCocoa
 
 final class TvMazeShowListViewModel: TvMazeBaseViewModel<ShowsRouterProtocol> {
     //MARK: Properties
-    private let service: TvMazeShowServiceProtocol,
+    private let service: TvMazeServiceProtocol,
                 scheduler: SchedulerType,
                 cellItemsRelay = BehaviorRelay<[ShowModel]>(value: [])
     
@@ -36,7 +36,7 @@ final class TvMazeShowListViewModel: TvMazeBaseViewModel<ShowsRouterProtocol> {
     var tvShowCells = BehaviorRelay<[ShowModel]>(value: [])
     
     init(router: ShowsRouterProtocol,
-         service: TvMazeShowServiceProtocol,
+         service: TvMazeServiceProtocol,
          scheduler: SchedulerType = MainScheduler.instance) {
         self.service = service
         self.scheduler = scheduler
@@ -66,7 +66,6 @@ final class TvMazeShowListViewModel: TvMazeBaseViewModel<ShowsRouterProtocol> {
         let searching = textFieldString
             .debounce(.milliseconds(500), scheduler: scheduler)
             .filter { $0.count > 0 }
-            .debug("searching...")
             .flatMapLatest(service.searchTvShows)
         
         let notSearching = textFieldString

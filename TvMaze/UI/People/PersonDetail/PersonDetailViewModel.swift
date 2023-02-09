@@ -11,7 +11,7 @@ import RxCocoa
 
 class PersonDetailViewModel: TvMazeBaseViewModel<PeopleRouterProtocol> {
     //MARK: Properties
-    private let service: TvMazePeopleServiceProtocol
+    private let service: TvMazeServiceProtocol
     
     let person: Person
     
@@ -21,7 +21,7 @@ class PersonDetailViewModel: TvMazeBaseViewModel<PeopleRouterProtocol> {
     
     init(router: PeopleRouterProtocol,
          person: Person,
-         service: TvMazePeopleServiceProtocol) {
+         service: TvMazeServiceProtocol) {
         self.person = person
         self.service = service
         super.init(router: router)

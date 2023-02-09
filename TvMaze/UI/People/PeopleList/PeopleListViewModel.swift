@@ -11,7 +11,7 @@ import RxCocoa
 
 class PeopleListViewModel: TvMazeBaseViewModel<PeopleRouterProtocol> {
     //MARK: Properties
-    private let service: TvMazePeopleServiceProtocol
+    private let service: TvMazeServiceProtocol
     
     let searchBarTextField = BehaviorRelay(value: ""),
         onPersonSelected = PublishRelay<Person>()
@@ -21,7 +21,7 @@ class PeopleListViewModel: TvMazeBaseViewModel<PeopleRouterProtocol> {
     }
     
     init(router: PeopleRouterProtocol,
-         service: TvMazePeopleServiceProtocol) {
+         service: TvMazeServiceProtocol) {
         self.service = service
         super.init(router: router)
     }

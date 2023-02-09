@@ -38,7 +38,7 @@ final class TvMazeShowListViewController: TvMazeBaseViewController<TvMazeShowLis
     private func setupViewModel() {
         let router = ShowsRouter(navigationController: navigationController ?? UINavigationController())
         viewModel = TvMazeShowListViewModel(router: router,
-                                            service: TvMazeShowService())
+                                            service: TvMazeService())
         
     }
     
