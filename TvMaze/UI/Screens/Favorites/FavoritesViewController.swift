@@ -15,17 +15,16 @@ class FavoritesViewController: TvMazeBaseViewController<FavoritesViewModel> {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableViewCells()
-        setupViewModel()
         bind()
-    }
-    
-    private func setupViewModel() {
-        let router = FavoriteRouter(navigationController: navigationController ?? UINavigationController())
-        viewModel = FavoritesViewModel(router: router)
     }
     
     override func bindInputs() {
         super.bindInputs()
+        
+        tableView
+            .rx.modelSelected(ShowModel.self)
+            .bind(to: viewModel.onFavoriteTouched)
+            .disposed(by: disposeBag)
         
         rx.viewWillAppear
             .map { _ in }

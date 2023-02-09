@@ -56,6 +56,7 @@
 		4BDC9F2329954A8A00CCB8B3 /* SearchTvShowsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC9F1829954A8A00CCB8B3 /* SearchTvShowsRequest.swift */; };
 		4BDC9F2429954A8A00CCB8B3 /* RequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC9F1A29954A8A00CCB8B3 /* RequestFactory.swift */; };
 		4BDC9F2529954A8A00CCB8B3 /* TvMazeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC9F1B29954A8A00CCB8B3 /* TvMazeService.swift */; };
+		4BDC9F2929955BE900CCB8B3 /* TvMazeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC9F2829955BE900CCB8B3 /* TvMazeTabBarController.swift */; };
 		4BDD70DA2991C203001FA9D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDD70D92991C203001FA9D6 /* AppDelegate.swift */; };
 		4BDD70E12991C203001FA9D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BDD70DF2991C203001FA9D6 /* Main.storyboard */; };
 		4BDD70E32991C205001FA9D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BDD70E22991C205001FA9D6 /* Assets.xcassets */; };
@@ -136,6 +137,7 @@
 		4BDC9F1829954A8A00CCB8B3 /* SearchTvShowsRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTvShowsRequest.swift; sourceTree = "<group>"; };
 		4BDC9F1A29954A8A00CCB8B3 /* RequestFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestFactory.swift; sourceTree = "<group>"; };
 		4BDC9F1B29954A8A00CCB8B3 /* TvMazeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TvMazeService.swift; sourceTree = "<group>"; };
+		4BDC9F2829955BE900CCB8B3 /* TvMazeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvMazeTabBarController.swift; sourceTree = "<group>"; };
 		4BDD70D62991C203001FA9D6 /* TvMaze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TvMaze.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BDD70D92991C203001FA9D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4BDD70E02991C203001FA9D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -232,10 +234,7 @@
 			isa = PBXGroup;
 			children = (
 				4B66D40A2991D6AA00963444 /* Router */,
-				4BDD70DF2991C203001FA9D6 /* Main.storyboard */,
-				4B09D42C2991D32D00E01DE7 /* TVShows */,
-				4BAC2F05299353B300BE64E6 /* People */,
-				4B030D81299492B7000AE3AD /* Favorites */,
+				4BDC9F2629955B8000CCB8B3 /* Screens */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -453,6 +452,26 @@
 				4BDC9F1A29954A8A00CCB8B3 /* RequestFactory.swift */,
 			);
 			path = Factory;
+			sourceTree = "<group>";
+		};
+		4BDC9F2629955B8000CCB8B3 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				4BDD70DF2991C203001FA9D6 /* Main.storyboard */,
+				4BDC9F2729955BD100CCB8B3 /* TabBar */,
+				4B09D42C2991D32D00E01DE7 /* TVShows */,
+				4BAC2F05299353B300BE64E6 /* People */,
+				4B030D81299492B7000AE3AD /* Favorites */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		4BDC9F2729955BD100CCB8B3 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				4BDC9F2829955BE900CCB8B3 /* TvMazeTabBarController.swift */,
+			);
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 		4BDD70CD2991C202001FA9D6 = {
@@ -815,6 +834,7 @@
 				4BDD70DA2991C203001FA9D6 /* AppDelegate.swift in Sources */,
 				4BDC9F2029954A8A00CCB8B3 /* GetPeopleRequest.swift in Sources */,
 				4BAC2F172993EA2800BE64E6 /* PersonDetailViewController.swift in Sources */,
+				4BDC9F2929955BE900CCB8B3 /* TvMazeTabBarController.swift in Sources */,
 				4B4C88572992DAA10042558D /* ShowDetailCellsDataSource.swift in Sources */,
 				4B66D4102991DA9300963444 /* TvMazeShowListViewController.swift in Sources */,
 				4B4C88552992B2360042558D /* Reactive+UIViewController.swift in Sources */,

@@ -13,7 +13,8 @@ class PersonDetailViewModel: TvMazeBaseViewModel<PeopleRouterProtocol> {
     //MARK: Properties
     private let service: TvMazeServiceProtocol
     
-    let person: Person
+    let person: Person,
+        onPersonTouched = PublishRelay<ShowModel>()
     
     var tvShowCells: Observable<[ShowModel]> {
         setupShowsCells()
@@ -29,6 +30,17 @@ class PersonDetailViewModel: TvMazeBaseViewModel<PeopleRouterProtocol> {
     
     override func setupBindings() {
         super.setupBindings()
+        setupOnPersonTouched()
+    }
+    
+    //MARK: Inputs
+    private func setupOnPersonTouched() {
+        onPersonTouched
+            .subscribe(onNext: { [weak self] show in
+                guard let self = self else { return }
+                self.router.showsRouter.goToTvShowDetail(tvShow: show, service: self.service)
+            })
+            .disposed(by: disposeBag)
     }
     
     //MARK: Outputs

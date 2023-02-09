@@ -22,7 +22,6 @@ final class TvMazeShowListViewController: TvMazeBaseViewController<TvMazeShowLis
         super.viewDidLoad()
         setupScreenLayout()
         setupTableViewCells()
-        setupViewModel()
         bind()
     }
     
@@ -33,13 +32,6 @@ final class TvMazeShowListViewController: TvMazeBaseViewController<TvMazeShowLis
     
     private func setupScreenLayout() {
         tabBarController?.tabBar.isHidden = false
-    }
-    
-    private func setupViewModel() {
-        let router = ShowsRouter(navigationController: navigationController ?? UINavigationController())
-        viewModel = TvMazeShowListViewModel(router: router,
-                                            service: TvMazeService())
-        
     }
     
     override func bindInputs() {

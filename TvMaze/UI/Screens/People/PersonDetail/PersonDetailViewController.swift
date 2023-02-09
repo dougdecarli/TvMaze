@@ -24,6 +24,11 @@ class PersonDetailViewController: TvMazeBaseViewController<PersonDetailViewModel
     
     override func bindInputs() {
         super.bindInputs()
+        
+        showsTableView
+            .rx.modelSelected(ShowModel.self)
+            .bind(to: viewModel.onPersonTouched)
+            .disposed(by: disposeBag)
     }
     
     override func bindOutputs() {

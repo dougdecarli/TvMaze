@@ -12,7 +12,7 @@
         <scene sceneID="dh4-Kj-fuH">
             <objects>
                 <navigationController id="uff-Br-G7c" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="TV Shows" image="tv" catalog="system" id="abb-f1-iEH"/>
+                    <tabBarItem key="tabBarItem" title="TV Shows" image="film" catalog="system" selectedImage="film.fill" id="abb-f1-iEH"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="dU8-Vc-Da6">
                         <rect key="frame" x="0.0" y="47" width="390" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -33,25 +33,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="2Cw-cE-9u1">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="2Cw-cE-9u1">
                                 <rect key="frame" x="0.0" y="199" width="390" height="611"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="rXN-jB-Y65">
                                 <rect key="frame" x="0.0" y="143" width="390" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="8aL-mh-H0g"/>
+                                </constraints>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9II-Yl-Trf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="2Cw-cE-9u1" firstAttribute="top" secondItem="rXN-jB-Y65" secondAttribute="bottom" id="2zi-1j-lGe"/>
-                            <constraint firstItem="2Cw-cE-9u1" firstAttribute="trailing" secondItem="9II-Yl-Trf" secondAttribute="trailing" id="IBZ-2y-H9J"/>
-                            <constraint firstItem="rXN-jB-Y65" firstAttribute="top" secondItem="9II-Yl-Trf" secondAttribute="top" id="LK5-ba-EqH"/>
-                            <constraint firstItem="2Cw-cE-9u1" firstAttribute="leading" secondItem="9II-Yl-Trf" secondAttribute="leading" id="NCN-an-LJo"/>
-                            <constraint firstItem="rXN-jB-Y65" firstAttribute="trailing" secondItem="9II-Yl-Trf" secondAttribute="trailing" id="faA-9p-6p6"/>
-                            <constraint firstItem="rXN-jB-Y65" firstAttribute="leading" secondItem="9II-Yl-Trf" secondAttribute="leading" id="keW-22-JCq"/>
-                            <constraint firstItem="2Cw-cE-9u1" firstAttribute="bottom" secondItem="9II-Yl-Trf" secondAttribute="bottom" id="sWF-Z9-ZAI"/>
+                            <constraint firstItem="rXN-jB-Y65" firstAttribute="trailing" secondItem="9II-Yl-Trf" secondAttribute="trailing" id="0MM-hO-WdV"/>
+                            <constraint firstItem="2Cw-cE-9u1" firstAttribute="top" secondItem="rXN-jB-Y65" secondAttribute="bottom" id="6hB-xB-lJX"/>
+                            <constraint firstItem="rXN-jB-Y65" firstAttribute="top" secondItem="9II-Yl-Trf" secondAttribute="top" id="ALQ-OI-RV1"/>
+                            <constraint firstItem="rXN-jB-Y65" firstAttribute="leading" secondItem="9II-Yl-Trf" secondAttribute="leading" id="Jm1-tx-nNi"/>
+                            <constraint firstItem="2Cw-cE-9u1" firstAttribute="top" secondItem="rXN-jB-Y65" secondAttribute="bottom" id="s7O-Tm-BR6"/>
+                            <constraint firstItem="2Cw-cE-9u1" firstAttribute="trailing" secondItem="9II-Yl-Trf" secondAttribute="trailing" id="uWk-RJ-1HF"/>
+                            <constraint firstItem="2Cw-cE-9u1" firstAttribute="leading" secondItem="9II-Yl-Trf" secondAttribute="leading" id="uzP-8G-keU"/>
+                            <constraint firstItem="2Cw-cE-9u1" firstAttribute="bottom" secondItem="9II-Yl-Trf" secondAttribute="bottom" id="xBt-MC-kDJ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="TV Shows" largeTitleDisplayMode="always" id="1a2-Rb-ah9"/>
@@ -155,7 +159,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="tv" catalog="system" width="128" height="95"/>
+        <image name="film" catalog="system" width="128" height="93"/>
+        <image name="film.fill" catalog="system" width="128" height="93"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

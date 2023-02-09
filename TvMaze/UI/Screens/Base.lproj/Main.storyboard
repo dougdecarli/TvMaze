@@ -6,10 +6,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Tab Bar Controller-->
+        <!--Tv Maze Tab Bar Controller-->
         <scene sceneID="xB0-bF-M33">
             <objects>
-                <tabBarController storyboardIdentifier="mainTabBar" id="209-SS-JC6" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="mainTabBar" id="209-SS-JC6" customClass="TvMazeTabBarController" customModule="TvMaze" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rJ4-jX-knx">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -39,7 +39,7 @@
         <scene sceneID="3SJ-KP-lFY">
             <objects>
                 <viewControllerPlaceholder storyboardName="Favorites" id="Fmy-f3-ycd" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="HDB-jU-q4P"/>
+                    <tabBarItem key="tabBarItem" title="Favorites" image="heart" catalog="system" id="HDB-jU-q4P"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="209-vg-OoY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -56,4 +56,7 @@
             <point key="canvasLocation" x="1333" y="-1850"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="heart" catalog="system" width="128" height="107"/>
+    </resources>
 </document>
