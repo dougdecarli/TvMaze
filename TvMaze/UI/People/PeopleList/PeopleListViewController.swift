@@ -37,6 +37,11 @@ class PeopleListViewController: TvMazeBaseViewController<PeopleListViewModel> {
     override func bindInputs() {
         super.bindInputs()
         
+        tableView
+            .rx.modelSelected(Person.self)
+            .bind(to: viewModel.onPersonSelected)
+            .disposed(by: disposeBag)
+        
         searchBar.rx.text.orEmpty
             .bind(to: viewModel.searchBarTextField)
             .disposed(by: disposeBag)

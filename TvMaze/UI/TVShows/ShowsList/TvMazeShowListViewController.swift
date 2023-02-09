@@ -15,7 +15,8 @@ final class TvMazeShowListViewController: TvMazeBaseViewController<TvMazeShowLis
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
-    private let activityIndicator = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.medium)
+    private let activityIndicator = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.medium),
+                emptyView = UIView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,12 +59,13 @@ final class TvMazeShowListViewController: TvMazeBaseViewController<TvMazeShowLis
             .bind(to: activityIndicator.rx.isAnimating)
             .disposed(by: disposeBag)
         
-        viewModel.isFetchingData.subscribe { [weak self] isFetchingData in
-            DispatchQueue.main.async {
-                self?.tableView.tableFooterView = isFetchingData ? self?.activityIndicator : UIView(frame: .zero)
+        viewModel.isFetchingData
+            .map { [weak self] isFetching -> UIView in
+                guard let self = self else { return self!.emptyView }
+                return isFetching ? self.activityIndicator : self.emptyView
             }
-        }
-        .disposed(by: disposeBag)
+            .bind(to: tableView.rx.tableFooterView)
+            .disposed(by: disposeBag)
         
         //MARK: Pagination
         tableView
@@ -73,15 +75,9 @@ final class TvMazeShowListViewController: TvMazeBaseViewController<TvMazeShowLis
                 let offsetY = self.tableView.contentOffset.y
                 let contentHeight = self.tableView.contentSize.height
                 if offsetY > contentHeight - self.tableView.frame.height {
-                    print("BOTTOM")
                     self.viewModel.tableViewDidScrollToBottom.onNext(())
                 }
             })
-            .disposed(by: disposeBag)
-        
-        viewModel.tvShowCells
-            .map { $0.count == 0 }
-            .bind(to: tableView.rx.isHidden)
             .disposed(by: disposeBag)
     }
     

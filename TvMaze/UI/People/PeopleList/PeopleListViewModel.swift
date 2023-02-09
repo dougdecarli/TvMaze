@@ -13,7 +13,8 @@ class PeopleListViewModel: TvMazeBaseViewModel<PeopleRouterProtocol> {
     //MARK: Properties
     private let service: TvMazePeopleServiceProtocol
     
-    let searchBarTextField = BehaviorRelay(value: "")
+    let searchBarTextField = BehaviorRelay(value: ""),
+        onPersonSelected = PublishRelay<Person>()
     
     var peopleCells: Observable<[Person]> {
         setupPeopleCells(searchBarTextField.asObservable())
@@ -27,8 +28,21 @@ class PeopleListViewModel: TvMazeBaseViewModel<PeopleRouterProtocol> {
     
     override func setupBindings() {
         super.setupBindings()
+        setupOnPersonSelected()
     }
     
+    //MARK: Input
+    private func setupOnPersonSelected() {
+        onPersonSelected
+            .subscribe(onNext: { [weak self] person in
+                guard let self = self else { return }
+                self.router.goToPersonDetail(person: person,
+                                             service: self.service)
+            })
+            .disposed(by: disposeBag)
+    }
+    
+    //MARK: Output
     private func setupPeopleCells(_ textFieldString: Observable<String>) -> Observable<[Person]> {
         let searching = textFieldString
             .filter { $0.count > 0 }

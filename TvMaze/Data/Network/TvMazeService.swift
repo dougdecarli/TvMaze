@@ -23,6 +23,8 @@ enum Endpoints: String {
     case getShows = "/shows?page="
     case getEpisodes = "/shows"
     case searchTvShows = "/search/shows?q="
+    case peopleSearch = "/search/people?q="
+    case peopleShows = "/people/"
 }
 
 enum ServiceErrors: Error {
@@ -48,10 +50,6 @@ protocol TvMazeShowServiceProtocol {
 
 class TvMazeShowService: BaseTvMazeService, TvMazeShowServiceProtocol {
     private var task: URLSessionTask?
-    
-    override init() {
-        
-    }
     
     func getShows(page: Int) -> Observable<[ShowModel]> {
         guard let url = URL(string: "\(API_URL)\(Endpoints.getShows.rawValue)\(page)") else {
@@ -137,5 +135,69 @@ class TvMazeShowService: BaseTvMazeService, TvMazeShowServiceProtocol {
     
     func cancelAllTasks() {
         task?.cancel()
+    }
+}
+
+protocol TvMazePeopleServiceProtocol {
+    func getPeople(by name: String) -> Observable<[Person]>
+    func getShowsByPerson(personId: Int) -> Observable<[ShowModel]>
+}
+
+class TvMazePeopleService: BaseTvMazeService, TvMazePeopleServiceProtocol {
+    private var task: URLSessionTask?
+    
+    func getPeople(by name: String) -> Observable<[Person]> {
+        guard let url = URL(string: ("\(API_URL)\(Endpoints.peopleSearch.rawValue)\(name.replacingOccurrences(of: " ", with: "%20"))"))
+        else {
+            return Observable<[Person]>.just([Person]())
+        }
+        
+        return Observable<[Person]>.create { [weak self] (observable) -> Disposable in
+            guard let self = self else { return Disposables.create() }
+            self.task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+                if error != nil {
+                    observable.onError(ServiceErrors.notFound)
+                }
+                
+                if let jsonData = data {
+                    do {
+                        let people = try JSONDecoder().decode(Array<SearchedPerson>.self, from: jsonData)
+                        observable.onNext(people.map { $0.person })
+                    } catch {
+                        observable.onError(ServiceErrors.defaultError)
+                    }
+                }
+                observable.onCompleted()
+            }
+            self.task?.resume()
+            return Disposables.create{}
+        }
+    }
+    
+    func getShowsByPerson(personId: Int) -> Observable<[ShowModel]> {
+        guard let url = URL(string: "\(API_URL)\(Endpoints.peopleShows.rawValue)\(personId)/castcredits?embed=show") else {
+            return Observable<[ShowModel]>.error(ServiceErrors.defaultError)
+        }
+        
+        return Observable<[ShowModel]>.create { [weak self] (observable) -> Disposable in
+            guard let self = self else { return Disposables.create() }
+            self.task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+                if error != nil {
+                    observable.onNext([ShowModel]())
+                }
+                
+                if let jsonData = data {
+                    do {
+                        let personShows = try JSONDecoder().decode(Array<CastResult>.self, from: jsonData)
+                        observable.onNext(personShows.map { $0.embedded.show })
+                    } catch {
+                        observable.onNext([ShowModel]())
+                    }
+                }
+                observable.onCompleted()
+            }
+            self.task?.resume()
+            return Disposables.create{}
+        }
     }
 }

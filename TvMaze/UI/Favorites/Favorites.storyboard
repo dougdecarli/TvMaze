@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Yp3-AW-HJe">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Favorites-->
+        <scene sceneID="Qj1-Hk-hrM">
+            <objects>
+                <navigationController title="Favorites" id="Yp3-AW-HJe" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="uLg-P1-AU9"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="dd4-oF-27y">
+                        <rect key="frame" x="0.0" y="47" width="390" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Lwc-ik-l4e" kind="relationship" relationship="rootViewController" id="Xs6-Ej-SJa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Rx-CB-vV3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="437" y="-724"/>
+        </scene>
+        <!--Favorites-->
+        <scene sceneID="qND-Ea-0Kj">
+            <objects>
+                <viewController title="Favorites" id="Lwc-ik-l4e" customClass="FavoritesViewController" customModule="TvMaze" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vyg-Fp-ifI">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="oFK-IR-HLg">
+                                <rect key="frame" x="0.0" y="143" width="390" height="667"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6xp-HL-kws"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="oFK-IR-HLg" firstAttribute="leading" secondItem="6xp-HL-kws" secondAttribute="leading" id="BEe-HM-Muw"/>
+                            <constraint firstItem="6xp-HL-kws" firstAttribute="bottom" secondItem="oFK-IR-HLg" secondAttribute="bottom" id="bIo-Gw-Iuk"/>
+                            <constraint firstItem="6xp-HL-kws" firstAttribute="trailing" secondItem="oFK-IR-HLg" secondAttribute="trailing" id="fNZ-dL-exY"/>
+                            <constraint firstItem="oFK-IR-HLg" firstAttribute="top" secondItem="6xp-HL-kws" secondAttribute="top" id="y2t-iX-vPW"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Favorites" largeTitleDisplayMode="always" id="W37-CM-fN6"/>
+                    <connections>
+                        <outlet property="tableView" destination="oFK-IR-HLg" id="Fih-hh-zZH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="El9-JM-6ib" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1181.5384615384614" y="-724.4075829383886"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

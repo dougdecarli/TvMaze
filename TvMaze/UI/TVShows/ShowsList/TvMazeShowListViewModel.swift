@@ -20,7 +20,8 @@ final class TvMazeShowListViewModel: TvMazeBaseViewModel<ShowsRouterProtocol> {
         isFetchingData = BehaviorRelay<Bool>(value: false)
     
     //MARK: Pagination
-    let tableViewDidScrollToBottom = PublishSubject<Void>()
+    let tableViewDidScrollToBottom = PublishSubject<Void>(),
+        onFavoriteButtonTouched = PublishRelay<ShowModel>()
     
     //MARK: Input Properties
     let onViewDidLoad = PublishRelay<Void>(),
@@ -32,9 +33,7 @@ final class TvMazeShowListViewModel: TvMazeBaseViewModel<ShowsRouterProtocol> {
         .just(false)
     }
     
-    var tvShowCells: Observable<[ShowModel]> {
-        setupTvShowCells(searchBarTextField.asObservable(), tableViewDidScrollToBottom)
-    }
+    var tvShowCells = BehaviorRelay<[ShowModel]>(value: [])
     
     init(router: ShowsRouterProtocol,
          service: TvMazeShowServiceProtocol,
@@ -47,10 +46,8 @@ final class TvMazeShowListViewModel: TvMazeBaseViewModel<ShowsRouterProtocol> {
     override func setupBindings() {
         super.setupBindings()
         setupOnTvShowSelected()
-        
-        tvShowCells
-            .bind(to: cellItemsRelay)
-            .disposed(by: disposeBag)
+        setupTvShowCells(searchBarTextField.asObservable(),
+                         tableViewDidScrollToBottom.asObservable())
     }
     
     //MARK: Input
@@ -65,7 +62,7 @@ final class TvMazeShowListViewModel: TvMazeBaseViewModel<ShowsRouterProtocol> {
     
     //MARK: Outputs
     private func setupTvShowCells(_ textFieldString: Observable<String>,
-                                  _ didScrollToBottom: Observable<Void>) -> Observable<[ShowModel]> {
+                                  _ didScrollToBottom: Observable<Void>) {
         let searching = textFieldString
             .debounce(.milliseconds(500), scheduler: scheduler)
             .filter { $0.count > 0 }
@@ -88,17 +85,19 @@ final class TvMazeShowListViewModel: TvMazeBaseViewModel<ShowsRouterProtocol> {
             .do(onNext: { [weak self] _ in
                 self?.isFetchingData.accept(true)
             })
-            .debug("DEBUG search:")
             .flatMapLatest(service.getShows(page:))
             .do(onNext: { [weak self] _ in
                 self?.isFetchingData.accept(false)
             })
-//            .withLatestFrom(cellItemsRelay) { (newShows, currentShows) in (newShows, currentShows) }
-//            .scan([ShowModel]()) { (accumulatedValues, showValues) in
-//                return showValues
-//            }
         
-        return Observable.merge(searching, notSearching, didScrollToBottom)
+        let sideEvents = Observable.merge(notSearching, didScrollToBottom)
+            .scan(tvShowCells.value) { (accumulatedValues, showValues) in
+                return accumulatedValues + showValues
+            }
+                
+        Observable.merge(sideEvents, searching)
+            .bind(to: tvShowCells)
+            .disposed(by: disposeBag)
     }
     
     //MARK: Navigation
