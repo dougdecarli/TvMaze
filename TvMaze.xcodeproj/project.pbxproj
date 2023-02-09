@@ -57,6 +57,15 @@
 		4BDC9F2429954A8A00CCB8B3 /* RequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC9F1A29954A8A00CCB8B3 /* RequestFactory.swift */; };
 		4BDC9F2529954A8A00CCB8B3 /* TvMazeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC9F1B29954A8A00CCB8B3 /* TvMazeService.swift */; };
 		4BDC9F2929955BE900CCB8B3 /* TvMazeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC9F2829955BE900CCB8B3 /* TvMazeTabBarController.swift */; };
+		4BDC9F2C299566AE00CCB8B3 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC9F2B299566AE00CCB8B3 /* SettingsViewController.swift */; };
+		4BDC9F2E299566BD00CCB8B3 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC9F2D299566BD00CCB8B3 /* SettingsViewModel.swift */; };
+		4BDC9F31299566D800CCB8B3 /* SettingsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC9F30299566D800CCB8B3 /* SettingsRouter.swift */; };
+		4BDC9F34299569A400CCB8B3 /* SecureStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC9F33299569A400CCB8B3 /* SecureStore.swift */; };
+		4BDC9F36299569F500CCB8B3 /* SecureStoreQueryable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC9F35299569F500CCB8B3 /* SecureStoreQueryable.swift */; };
+		4BDC9F3829956AFC00CCB8B3 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BDC9F3729956AFC00CCB8B3 /* Settings.storyboard */; };
+		4BDC9F402995788200CCB8B3 /* PincodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC9F3F2995788200CCB8B3 /* PincodeViewController.swift */; };
+		4BDC9F422995788A00CCB8B3 /* PincodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC9F412995788A00CCB8B3 /* PincodeViewModel.swift */; };
+		4BDC9F4429957FCA00CCB8B3 /* UITextFieldExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC9F4329957FCA00CCB8B3 /* UITextFieldExtensions.swift */; };
 		4BDD70DA2991C203001FA9D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDD70D92991C203001FA9D6 /* AppDelegate.swift */; };
 		4BDD70E12991C203001FA9D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BDD70DF2991C203001FA9D6 /* Main.storyboard */; };
 		4BDD70E32991C205001FA9D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BDD70E22991C205001FA9D6 /* Assets.xcassets */; };
@@ -138,6 +147,15 @@
 		4BDC9F1A29954A8A00CCB8B3 /* RequestFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestFactory.swift; sourceTree = "<group>"; };
 		4BDC9F1B29954A8A00CCB8B3 /* TvMazeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TvMazeService.swift; sourceTree = "<group>"; };
 		4BDC9F2829955BE900CCB8B3 /* TvMazeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvMazeTabBarController.swift; sourceTree = "<group>"; };
+		4BDC9F2B299566AE00CCB8B3 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		4BDC9F2D299566BD00CCB8B3 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		4BDC9F30299566D800CCB8B3 /* SettingsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRouter.swift; sourceTree = "<group>"; };
+		4BDC9F33299569A400CCB8B3 /* SecureStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureStore.swift; sourceTree = "<group>"; };
+		4BDC9F35299569F500CCB8B3 /* SecureStoreQueryable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureStoreQueryable.swift; sourceTree = "<group>"; };
+		4BDC9F3729956AFC00CCB8B3 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		4BDC9F3F2995788200CCB8B3 /* PincodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PincodeViewController.swift; sourceTree = "<group>"; };
+		4BDC9F412995788A00CCB8B3 /* PincodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PincodeViewModel.swift; sourceTree = "<group>"; };
+		4BDC9F4329957FCA00CCB8B3 /* UITextFieldExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtensions.swift; sourceTree = "<group>"; };
 		4BDD70D62991C203001FA9D6 /* TvMaze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TvMaze.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BDD70D92991C203001FA9D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4BDD70E02991C203001FA9D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -216,6 +234,7 @@
 		4B09D4252991C84800E01DE7 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				4BDC9F322995699900CCB8B3 /* Secure */,
 				4BDC9F0E29954A8A00CCB8B3 /* Network */,
 				4B030D8C299497C8000AE3AD /* Local */,
 			);
@@ -291,22 +310,23 @@
 		4B66D40A2991D6AA00963444 /* Router */ = {
 			isa = PBXGroup;
 			children = (
-				4B030D8829949578000AE3AD /* FavoriteRouter */,
-				4BAC2F0B2993540600BE64E6 /* People */,
 				4B66D41F2991DDAE00963444 /* Shows */,
+				4BAC2F0B2993540600BE64E6 /* People */,
+				4B030D8829949578000AE3AD /* FavoriteRouter */,
+				4BDC9F2F299566CA00CCB8B3 /* SettingsRouter */,
 				4B66D40B2991D6BF00963444 /* TvMazeStarter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
 		};
-		4B66D4132991DAF400963444 /* BaseProtocols */ = {
+		4B66D4132991DAF400963444 /* BaseArchitecture Protocols */ = {
 			isa = PBXGroup;
 			children = (
 				4B66D4142991DB1A00963444 /* Protocols */,
 				4B66D41B2991DB5700963444 /* TvMazeBaseViewController.swift */,
 				4B66D41D2991DB6100963444 /* TvMazeBaseViewModel.swift */,
 			);
-			path = BaseProtocols;
+			path = "BaseArchitecture Protocols";
 			sourceTree = "<group>";
 		};
 		4B66D4142991DB1A00963444 /* Protocols */ = {
@@ -343,6 +363,7 @@
 				4B4C88542992B2360042558D /* Reactive+UIViewController.swift */,
 				4BAC2EFE2992DEAA00BE64E6 /* String+DecodingExtension.swift */,
 				4BF9CDE229952AE000DCE25C /* Reactive+UITableViewCell.swift */,
+				4BDC9F4329957FCA00CCB8B3 /* UITextFieldExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -462,6 +483,7 @@
 				4B09D42C2991D32D00E01DE7 /* TVShows */,
 				4BAC2F05299353B300BE64E6 /* People */,
 				4B030D81299492B7000AE3AD /* Favorites */,
+				4BDC9F2A2995668100CCB8B3 /* Settings */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -472,6 +494,51 @@
 				4BDC9F2829955BE900CCB8B3 /* TvMazeTabBarController.swift */,
 			);
 			path = TabBar;
+			sourceTree = "<group>";
+		};
+		4BDC9F2A2995668100CCB8B3 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				4BDC9F3729956AFC00CCB8B3 /* Settings.storyboard */,
+				4BDC9F3D2995785D00CCB8B3 /* Setting */,
+				4BDC9F3E2995786500CCB8B3 /* Pincode */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		4BDC9F2F299566CA00CCB8B3 /* SettingsRouter */ = {
+			isa = PBXGroup;
+			children = (
+				4BDC9F30299566D800CCB8B3 /* SettingsRouter.swift */,
+			);
+			path = SettingsRouter;
+			sourceTree = "<group>";
+		};
+		4BDC9F322995699900CCB8B3 /* Secure */ = {
+			isa = PBXGroup;
+			children = (
+				4BDC9F33299569A400CCB8B3 /* SecureStore.swift */,
+				4BDC9F35299569F500CCB8B3 /* SecureStoreQueryable.swift */,
+			);
+			path = Secure;
+			sourceTree = "<group>";
+		};
+		4BDC9F3D2995785D00CCB8B3 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				4BDC9F2B299566AE00CCB8B3 /* SettingsViewController.swift */,
+				4BDC9F2D299566BD00CCB8B3 /* SettingsViewModel.swift */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		4BDC9F3E2995786500CCB8B3 /* Pincode */ = {
+			isa = PBXGroup;
+			children = (
+				4BDC9F3F2995788200CCB8B3 /* PincodeViewController.swift */,
+				4BDC9F412995788A00CCB8B3 /* PincodeViewModel.swift */,
+			);
+			path = Pincode;
 			sourceTree = "<group>";
 		};
 		4BDD70CD2991C202001FA9D6 = {
@@ -500,7 +567,7 @@
 			isa = PBXGroup;
 			children = (
 				4B66D4272991EE4400963444 /* Extensions */,
-				4B66D4132991DAF400963444 /* BaseProtocols */,
+				4B66D4132991DAF400963444 /* BaseArchitecture Protocols */,
 				4B09D4282991CEDC00E01DE7 /* Models */,
 				4B09D4252991C84800E01DE7 /* Service */,
 				4B09D42B2991D30300E01DE7 /* UI */,
@@ -664,6 +731,7 @@
 			files = (
 				4B66D4262991E82200963444 /* ShowListTableViewCell.xib in Resources */,
 				4BAC2EFD2992DC3200BE64E6 /* ShowDetailHeaderTableViewCell.xib in Resources */,
+				4BDC9F3829956AFC00CCB8B3 /* Settings.storyboard in Resources */,
 				4BAC2F14299359C600BE64E6 /* PeopleTableViewCell.xib in Resources */,
 				4BDD70E62991C205001FA9D6 /* LaunchScreen.storyboard in Resources */,
 				4B030D83299492CD000AE3AD /* Favorites.storyboard in Resources */,
@@ -817,6 +885,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B66D42E29921C0400963444 /* TvShowDetailViewModel.swift in Sources */,
+				4BDC9F2E299566BD00CCB8B3 /* SettingsViewModel.swift in Sources */,
 				4BAC2F08299353D500BE64E6 /* PeopleListViewController.swift in Sources */,
 				4BAC2F13299359C600BE64E6 /* PeopleTableViewCell.swift in Sources */,
 				4BAC2F0A299353E600BE64E6 /* PeopleListViewModel.swift in Sources */,
@@ -824,6 +893,7 @@
 				4BDC9F2329954A8A00CCB8B3 /* SearchTvShowsRequest.swift in Sources */,
 				4BDC9F1E29954A8A00CCB8B3 /* ServiceRequest.swift in Sources */,
 				4B66D40E2991D6F100963444 /* ShowsRouter.swift in Sources */,
+				4BDC9F2C299566AE00CCB8B3 /* SettingsViewController.swift in Sources */,
 				4BAC2EFF2992DEAA00BE64E6 /* String+DecodingExtension.swift in Sources */,
 				4BDC9F1F29954A8A00CCB8B3 /* GetPagedShowsRequest.swift in Sources */,
 				4BDC9F1C29954A8A00CCB8B3 /* TvMazeServiceShow.swift in Sources */,
@@ -840,24 +910,30 @@
 				4B4C88552992B2360042558D /* Reactive+UIViewController.swift in Sources */,
 				4B030D8A29949586000AE3AD /* FavoriteRouter.swift in Sources */,
 				4B030D8729949556000AE3AD /* FavoritesViewModel.swift in Sources */,
+				4BDC9F31299566D800CCB8B3 /* SettingsRouter.swift in Sources */,
 				4BDC9F2529954A8A00CCB8B3 /* TvMazeService.swift in Sources */,
 				4B66D41C2991DB5700963444 /* TvMazeBaseViewController.swift in Sources */,
 				4BDC9F2429954A8A00CCB8B3 /* RequestFactory.swift in Sources */,
 				4BAC2F022992EA8C00BE64E6 /* EpisodeDetailViewModel.swift in Sources */,
 				4B66D41E2991DB6100963444 /* TvMazeBaseViewModel.swift in Sources */,
+				4BDC9F34299569A400CCB8B3 /* SecureStore.swift in Sources */,
 				4B66D40C2991D6BF00963444 /* TvMazeStarter.swift in Sources */,
 				4B66D4182991DB3B00963444 /* TvMazeViewControllerProtocol.swift in Sources */,
 				4BAC2EFC2992DC3200BE64E6 /* ShowDetailHeaderTableViewCell.swift in Sources */,
 				4B66D4162991DB2A00963444 /* TvMazeViewModelProtocol.swift in Sources */,
 				4BF9CDE329952AE000DCE25C /* Reactive+UITableViewCell.swift in Sources */,
 				4BDC9F1D29954A8A00CCB8B3 /* TvMazeBaseService.swift in Sources */,
+				4BDC9F422995788A00CCB8B3 /* PincodeViewModel.swift in Sources */,
 				4BDC9F2229954A8A00CCB8B3 /* GetShowsByPersonRequest.swift in Sources */,
 				4B030D8E29949800000AE3AD /* FavoritesUserDefaultsManager.swift in Sources */,
+				4BDC9F402995788200CCB8B3 /* PincodeViewController.swift in Sources */,
 				4BAC2F192993EA3100BE64E6 /* PersonDetailViewModel.swift in Sources */,
 				4B66D42C29921BD300963444 /* TvShowDetailViewController.swift in Sources */,
 				4BDC9F2129954A8A00CCB8B3 /* GetEpisodesRequest.swift in Sources */,
 				4B09D42A2991CEEC00E01DE7 /* TvMazeShowModel.swift in Sources */,
 				4B66D4122991DAA000963444 /* TvMazeShowListViewModel.swift in Sources */,
+				4BDC9F4429957FCA00CCB8B3 /* UITextFieldExtensions.swift in Sources */,
+				4BDC9F36299569F500CCB8B3 /* SecureStoreQueryable.swift in Sources */,
 				4B030D852994954E000AE3AD /* FavoritesViewController.swift in Sources */,
 				4B66D4252991E82200963444 /* ShowListTableViewCell.swift in Sources */,
 			);

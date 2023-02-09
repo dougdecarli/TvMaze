@@ -10,8 +10,9 @@ import RxCocoa
 
 class TvShowDetailViewModel: TvMazeBaseViewModel<ShowsRouterProtocol> {
     //MARK: Properties
-    private let tvShowModel: ShowModel,
-                service: TvMazeServiceProtocol
+    private var tvShowModel: ShowModel,
+                service: TvMazeServiceProtocol,
+                seasonCounter = 1
     
     private let episodesSeasonSection = BehaviorRelay<[ShowDetailsSectionModel]>(value: [])
     
@@ -68,11 +69,7 @@ class TvShowDetailViewModel: TvMazeBaseViewModel<ShowsRouterProtocol> {
             .subscribe(onNext: { [weak self] episodes in
                 guard let self = self else { return }
                 self.stopLoader()
-                let seasonsByEpisode = self.resolveEpisodesCells(episodes)
-                seasonsByEpisode.forEach({ (season, episodes) in
-                    self.episodesSeasonSection.accept(self.episodesSeasonSection.value + [.init(model: "Season \(season)",
-                                                                                                items: self.retrieveEpisodesDataSource(episodes: episodes))])
-                })
+                self.resolveEpisodesCells(episodes)
             }, onError: { [weak self] _ in
                 self?.stopLoader()
             })
@@ -84,12 +81,21 @@ class TvShowDetailViewModel: TvMazeBaseViewModel<ShowsRouterProtocol> {
         episodesSeasonSection.accept([.init(model: "", items: [.header(model: tvShowModel)])])
     }
     
-    private func resolveEpisodesCells(_ episodes: [Episode]) -> [Int: [Episode]] {
+    private func resolveEpisodesCells(_ episodes: [Episode]) {
         var episodesBySeason: [Int: [Episode]] = [:]
-        let seasons = Set(episodes.map { $0.season })
-        seasons.forEach { episodesBySeason[$0] = [] }
-        episodes.forEach { episodesBySeason[$0.season]?.append($0) }
-        return episodesBySeason
+        episodes.forEach { episode in
+            if episodesBySeason[episode.season] == nil {
+                episodesBySeason[episode.season] = [episode]
+            } else {
+                episodesBySeason[episode.season]?.append(episode)
+            }
+        }
+        let sortedSeasons = episodesBySeason.keys.sorted()
+        seasonCounter = 1
+        sortedSeasons.forEach({ season in
+            episodesSeasonSection.accept(episodesSeasonSection.value + [.init(model: "Season \(seasonCounter)", items: retrieveEpisodesDataSource(episodes: episodesBySeason[seasonCounter]!))])
+            seasonCounter += 1
+        })
     }
     
     func retrieveEpisodesDataSource(episodes: [Episode]) -> [ShowDetailCellsDataSource] {

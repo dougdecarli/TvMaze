@@ -10,7 +10,10 @@ import RxSwift
 import RxCocoa
 
 final class TvMazeTabBarController: UITabBarController {
-    private var service: TvMazeServiceProtocol = TvMazeService()
+    private var service: TvMazeServiceProtocol = TvMazeService(),
+                secureStore = SecureStore(secureStoreQueryable: GenericPasswordQueryable(service: "PINService")),
+                settingsRouter: SettingsRouterProtocol?,
+                disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,11 +33,14 @@ final class TvMazeTabBarController: UITabBarController {
                     loadPeopleVC(peopleVC)
                 } else if let favoriteVC = navBar.topViewController as? FavoritesViewController {
                     loadFavoriteVC(favoriteVC)
+                } else if let settingsVC = navBar.topViewController as? SettingsViewController {
+                    loadSettingsVC(settingsVC)
                 }
             }
         }
     }
     
+    //MARK: Data injection on VCs
     private func loadShowsVC(_ showsVC: TvMazeShowListViewController) {
         let router = ShowsRouter(navigationController: showsVC.navigationController ?? UINavigationController())
         let viewModel = TvMazeShowListViewModel(router: router, service: service)
@@ -53,5 +59,31 @@ final class TvMazeTabBarController: UITabBarController {
                                     navigationController: favoriteVC.navigationController ?? UINavigationController())
         let viewModel = FavoritesViewModel(router: router, service: service)
         favoriteVC.viewModel = viewModel
+    }
+    
+    private func loadSettingsVC(_ loadSettingsVC: SettingsViewController) {
+        settingsRouter = SettingsRouter(navigationController: loadSettingsVC.navigationController ?? UINavigationController(),
+                                        secureStore: secureStore)
+        guard let settingsRouter else { return }
+        let viewModel = SettingsViewModel(router: settingsRouter, secureStore: secureStore)
+        loadSettingsVC.viewModel = viewModel
+        setUserHasPincodeObserver(router: settingsRouter)
+    }
+    
+    private func setUserHasPincodeObserver(router: SettingsRouterProtocol) {
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(verifyUserHasPincode),
+                                               name: NSNotification.Name("verifyPin"),
+                                               object: nil)
+    }
+    
+    //MARK: PIN verification
+    @objc private func verifyUserHasPincode() {
+        do {
+            let pincode = try secureStore.getValue(for: SecureDataType.pinPassword)
+            if pincode != nil {
+                settingsRouter?.goToPinCodeViewController(isCreatingPinCode: false)
+            }
+        } catch {}
     }
 }
