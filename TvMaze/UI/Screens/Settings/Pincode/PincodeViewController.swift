@@ -9,6 +9,7 @@ import UIKit
 
 final class PincodeViewController: TvMazeBaseViewController<PincodeViewModel> {
     @IBOutlet weak var pinCodeTextField: UITextField!
+    @IBOutlet weak var errorMessageLabel: UILabel!
     @IBOutlet weak var continueButton: UIButton!
     
     override func viewDidLoad() {
@@ -38,6 +39,16 @@ final class PincodeViewController: TvMazeBaseViewController<PincodeViewModel> {
         pinCodeTextField.rx.text.orEmpty
             .startWith("")
             .bind(to: viewModel.pinCodeTextFieldString)
+            .disposed(by: disposeBag)
+        
+        viewModel.isButtonEnabled
+            .drive(continueButton.rx.isEnabled)
+            .disposed(by: disposeBag)
+        
+        viewModel
+            .emitError
+            .map { !$0 }
+            .bind(to: errorMessageLabel.rx.isHidden)
             .disposed(by: disposeBag)
     }
     

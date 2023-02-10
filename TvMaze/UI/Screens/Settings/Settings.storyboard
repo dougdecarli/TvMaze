@@ -115,18 +115,29 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pin incorrect! Please try again." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="09p-uY-JLB">
+                                <rect key="frame" x="12" y="508.99999999999994" width="366" height="20.333333333333314"/>
+                                <color key="tintColor" systemColor="systemPinkColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.99904197449999999" green="0.23093071579999999" blue="0.1868988872" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="s5r-Uj-ybe"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="09p-uY-JLB" firstAttribute="top" secondItem="8Px-vH-wWE" secondAttribute="bottom" constant="8" symbolic="YES" id="30u-Sf-hD8"/>
                             <constraint firstItem="s5r-Uj-ybe" firstAttribute="trailing" secondItem="8Px-vH-wWE" secondAttribute="trailing" constant="12" id="L9e-dD-1sN"/>
+                            <constraint firstItem="09p-uY-JLB" firstAttribute="leading" secondItem="s5r-Uj-ybe" secondAttribute="leading" constant="12" id="eaR-dN-qfS"/>
                             <constraint firstItem="8Px-vH-wWE" firstAttribute="centerY" secondItem="s5r-Uj-ybe" secondAttribute="centerY" id="xHO-6m-qNx"/>
                             <constraint firstItem="8Px-vH-wWE" firstAttribute="leading" secondItem="s5r-Uj-ybe" secondAttribute="leading" constant="12" id="yNE-TK-OtH"/>
+                            <constraint firstItem="s5r-Uj-ybe" firstAttribute="trailing" secondItem="09p-uY-JLB" secondAttribute="trailing" constant="12" id="zS7-BD-cuC"/>
                         </constraints>
                     </view>
                     <modalPageSheetSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="continueButton" destination="WWE-xd-qHm" id="Hxa-hu-hRF"/>
+                        <outlet property="errorMessageLabel" destination="09p-uY-JLB" id="QsD-0R-3MJ"/>
                         <outlet property="pinCodeTextField" destination="2bb-hH-Kxb" id="CzW-33-Uys"/>
                     </connections>
                 </viewController>
@@ -144,6 +155,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

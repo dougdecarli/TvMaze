@@ -13,7 +13,12 @@ final class PincodeViewModel: TvMazeBaseViewModel<SettingsRouterProtocol> {
     let isCreatingPinCode: Bool,
         onContinueButtonTouched = PublishRelay<Void>(),
         pinCodeTextFieldString = PublishRelay<String>(),
-        dismissViewController = PublishRelay<Void>()
+        dismissViewController = PublishRelay<Void>(),
+        emitError = BehaviorRelay<Bool>(value: false)
+    
+    var isButtonEnabled: Driver<Bool> {
+        setupIsButtonEnabled()
+    }
     
     init(router: SettingsRouterProtocol,
          secureStore: SecureStore,
@@ -41,13 +46,21 @@ final class PincodeViewModel: TvMazeBaseViewModel<SettingsRouterProtocol> {
             .disposed(by: disposeBag)
     }
     
+    //MARK: Inputs
+    private func setupIsButtonEnabled() -> Driver<Bool> {
+        pinCodeTextFieldString
+            .startWith("")
+            .map { $0.count == 4 }
+            .asDriver(onErrorJustReturn: false)
+    }
+    
     //MARK: Helper methods
     private func savePin(pin: String) {
         do {
             try secureStore.setValue(pin, for: SecureDataType.pinPassword)
             dismissViewController.accept(())
         } catch {
-            print(error)
+            setErrorMessage()
         }
     }
     
@@ -63,6 +76,6 @@ final class PincodeViewModel: TvMazeBaseViewModel<SettingsRouterProtocol> {
     }
     
     private func setErrorMessage() {
-        
+        emitError.accept(true)
     }
 }
