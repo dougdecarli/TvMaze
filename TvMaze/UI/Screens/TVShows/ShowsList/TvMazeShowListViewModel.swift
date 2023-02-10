@@ -99,10 +99,7 @@ final class TvMazeShowListViewModel: TvMazeBaseViewModel<ShowsRouterProtocol> {
             .disposed(by: disposeBag)
     }
     
-    //MARK: Navigation
-    
     //MARK: - Helper methods
-    
     private func startLoading(_: Any? = nil) {
         isLoaderShowing.onNext(true)
     }

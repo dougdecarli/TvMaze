@@ -10,14 +10,14 @@ import UIKit
 protocol PeopleRouterProtocol {
     func goToPersonDetail(person: Person,
                           service: TvMazeServiceProtocol)
-    var showsRouter: ShowsRouter { get set }
+    var showsRouter: ShowsRouterProtocol { get set }
 }
 
 class PeopleRouter: PeopleRouterProtocol {
     private let navigationController: UINavigationController,
                 peopleStoryboard = UIStoryboard(name: "People", bundle: nil)
     
-    var showsRouter: ShowsRouter
+    var showsRouter: ShowsRouterProtocol
     
     init(navigationController: UINavigationController,
          showsRouter: ShowsRouter) {

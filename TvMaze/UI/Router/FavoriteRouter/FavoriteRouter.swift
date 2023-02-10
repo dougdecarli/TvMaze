@@ -8,16 +8,16 @@
 import UIKit
 
 protocol FavoriteRouterProtocol {
-    var showsRouter: ShowsRouter { get set }
+    var showsRouter: ShowsRouterProtocol { get set }
 }
 
 class FavoriteRouter: FavoriteRouterProtocol {
     private let navigationController: UINavigationController,
                 favoriteStoryboard = UIStoryboard(name: "Favorites", bundle: nil)
     
-    var showsRouter: ShowsRouter
+    var showsRouter: ShowsRouterProtocol
     
-    init(showsRouter: ShowsRouter,
+    init(showsRouter: ShowsRouterProtocol,
          navigationController: UINavigationController) {
         self.navigationController = navigationController
         self.showsRouter = showsRouter

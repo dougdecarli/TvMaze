@@ -10,7 +10,7 @@ import RxCocoa
 import RxSwift
 import RxDataSources
 
-class TvShowDetailViewController: TvMazeBaseViewController<TvShowDetailViewModel> {
+final class TvShowDetailViewController: TvMazeBaseViewController<TvShowDetailViewModel> {
     @IBOutlet weak var episodesTableView: UITableView!
     
     private lazy var dataSource = DataSource(configureCell: { [weak self] (dataSource, table, indexPath, item) in
@@ -46,7 +46,7 @@ class TvShowDetailViewController: TvMazeBaseViewController<TvShowDetailViewModel
     override func bindOutputs() {
         super.bindOutputs()
         viewModel
-            .episodeSeasonCells
+            .showDetailCells
             .startWith([])
             .bind(to: episodesTableView.rx.items(dataSource: dataSource))
             .disposed(by: disposeBag)

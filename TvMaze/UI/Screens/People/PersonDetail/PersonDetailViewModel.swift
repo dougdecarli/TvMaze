@@ -9,7 +9,7 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-class PersonDetailViewModel: TvMazeBaseViewModel<PeopleRouterProtocol> {
+final class PersonDetailViewModel: TvMazeBaseViewModel<PeopleRouterProtocol> {
     //MARK: Properties
     private let service: TvMazeServiceProtocol
     

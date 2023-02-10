@@ -10,7 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class PeopleListViewController: TvMazeBaseViewController<PeopleListViewModel> {
+final class PeopleListViewController: TvMazeBaseViewController<PeopleListViewModel> {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     

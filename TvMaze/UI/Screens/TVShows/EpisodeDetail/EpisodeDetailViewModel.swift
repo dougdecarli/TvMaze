@@ -9,7 +9,7 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-class EpisodeDetailViewModel: TvMazeBaseViewModel<ShowsRouterProtocol> {
+final class EpisodeDetailViewModel: TvMazeBaseViewModel<ShowsRouterProtocol> {
     //MARK: Properties
     let episode: Episode
     

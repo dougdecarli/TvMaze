@@ -11,7 +11,15 @@ enum UserDefaultsKeys: String {
     case favorites = "favorites"
 }
 
-class FavoritesUserDefaultsManager {
+protocol FavoritesUserDefaultsManagerProtocol {
+    func addFavorite(tvShow: ShowModel)
+    func saveShows(_ shows: [ShowModel])
+    func getAllFavoriteShows() -> [ShowModel]
+    func getFavorite(withId id: Int) -> ShowModel?
+    func removeFavorite(withId id: Int)
+}
+
+class FavoritesUserDefaultsManager: FavoritesUserDefaultsManagerProtocol {
     static let shared = FavoritesUserDefaultsManager()
     private init() {}
     
@@ -71,4 +79,20 @@ class FavoritesUserDefaultsManager {
             }
         }
     }
+}
+
+class FavoritesUserDefaultsManagerMock: FavoritesUserDefaultsManagerProtocol {
+    func addFavorite(tvShow: ShowModel) {}
+    
+    func saveShows(_ shows: [ShowModel]) {}
+    
+    func getAllFavoriteShows() -> [ShowModel] {
+        ShowModel.mockArray()
+    }
+    
+    func getFavorite(withId id: Int) -> ShowModel? {
+        ShowModel.mockArray().first!
+    }
+    
+    func removeFavorite(withId id: Int) {}
 }

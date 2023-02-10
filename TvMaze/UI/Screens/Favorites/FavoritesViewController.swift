@@ -9,7 +9,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class FavoritesViewController: TvMazeBaseViewController<FavoritesViewModel> {
+final class FavoritesViewController: TvMazeBaseViewController<FavoritesViewModel> {
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {

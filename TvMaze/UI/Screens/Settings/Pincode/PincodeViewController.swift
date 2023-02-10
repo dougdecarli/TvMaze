@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PincodeViewController: TvMazeBaseViewController<PincodeViewModel> {
+final class PincodeViewController: TvMazeBaseViewController<PincodeViewModel> {
     @IBOutlet weak var pinCodeTextField: UITextField!
     @IBOutlet weak var continueButton: UIButton!
     

@@ -53,13 +53,17 @@ class TvMazeBaseViewController<ViewModel: TvMazeViewModelProtocol>: UIViewContro
     internal func toggleLoaderState(_ showLoader: Bool) {
         toggleIsUserInteractionEnabled(showLoader)
         
-        showLoader ?
-        activityIndicatorView.startAnimating() :
-        activityIndicatorView.stopAnimating()
+        DispatchQueue.main.async {
+            showLoader ?
+            self.activityIndicatorView.startAnimating() :
+            self.activityIndicatorView.stopAnimating()
+        }
     }
     
     private func toggleIsUserInteractionEnabled(_ showLoader: Bool) {
-        view.isUserInteractionEnabled = !showLoader
+        DispatchQueue.main.async {
+            self.view.isUserInteractionEnabled = !showLoader
+        }
     }
     
     open override var preferredStatusBarStyle: UIStatusBarStyle { return .lightContent }

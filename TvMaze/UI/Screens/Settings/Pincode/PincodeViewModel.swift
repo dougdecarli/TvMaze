@@ -8,7 +8,7 @@
 import RxSwift
 import RxCocoa
 
-class PincodeViewModel: TvMazeBaseViewModel<SettingsRouterProtocol> {
+final class PincodeViewModel: TvMazeBaseViewModel<SettingsRouterProtocol> {
     private let secureStore: SecureStore
     let isCreatingPinCode: Bool,
         onContinueButtonTouched = PublishRelay<Void>(),

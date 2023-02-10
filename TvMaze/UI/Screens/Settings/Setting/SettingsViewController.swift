@@ -9,7 +9,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class SettingsViewController: TvMazeBaseViewController<SettingsViewModel> {
+final class SettingsViewController: TvMazeBaseViewController<SettingsViewModel> {
     @IBOutlet weak var pinCodeSwitch: UISwitch!
     
     override func viewDidLoad() {

@@ -54,12 +54,12 @@ import RxCocoa
 class ShowListTableViewCellViewModel {
     private let disposeBag = DisposeBag(),
                 model: ShowModel,
-                favoriteManager: FavoritesUserDefaultsManager
+                favoriteManager: FavoritesUserDefaultsManagerProtocol
     let onFavoriteButtonTouched = PublishRelay<Void>(),
         isShowFavorited = BehaviorRelay<Bool>(value: false)
     
     init(model: ShowModel,
-         favoriteManager: FavoritesUserDefaultsManager = FavoritesUserDefaultsManager.shared) {
+         favoriteManager: FavoritesUserDefaultsManagerProtocol = FavoritesUserDefaultsManager.shared) {
         self.model = model
         self.favoriteManager = favoriteManager
         getIsFavorited()

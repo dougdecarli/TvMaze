@@ -9,7 +9,7 @@ import Security
 import RxSwift
 import RxCocoa
 
-class SettingsViewModel: TvMazeBaseViewModel<SettingsRouterProtocol> {
+final class SettingsViewModel: TvMazeBaseViewModel<SettingsRouterProtocol> {
     private let secureStore: SecureStore
     lazy var onSwitchTouched = BehaviorRelay<Bool>(value: userHasPincode())
     

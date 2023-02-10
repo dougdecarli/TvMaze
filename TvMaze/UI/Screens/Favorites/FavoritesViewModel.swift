@@ -8,18 +8,18 @@
 import RxSwift
 import RxCocoa
 
-class FavoritesViewModel: TvMazeBaseViewModel<FavoriteRouterProtocol> {
+final class FavoritesViewModel: TvMazeBaseViewModel<FavoriteRouterProtocol> {
     //MARK: Properties
     let onViewWillAppear = PublishRelay<Void>(),
         onFavoriteTouched = PublishRelay<ShowModel>()
     var tvShowCells = PublishRelay<[ShowModel]>()
     
-    private let favoriteManager: FavoritesUserDefaultsManager,
+    private let favoriteManager: FavoritesUserDefaultsManagerProtocol,
                 service: TvMazeServiceProtocol
     
     init(router: FavoriteRouterProtocol,
          service: TvMazeServiceProtocol,
-         favoriteManager: FavoritesUserDefaultsManager = FavoritesUserDefaultsManager.shared) {
+         favoriteManager: FavoritesUserDefaultsManagerProtocol = FavoritesUserDefaultsManager.shared) {
         self.favoriteManager = favoriteManager
         self.service = service
         super.init(router: router)

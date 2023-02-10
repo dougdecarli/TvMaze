@@ -13,7 +13,7 @@
 		4B030D8729949556000AE3AD /* FavoritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B030D8629949556000AE3AD /* FavoritesViewModel.swift */; };
 		4B030D8A29949586000AE3AD /* FavoriteRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B030D8929949586000AE3AD /* FavoriteRouter.swift */; };
 		4B030D8E29949800000AE3AD /* FavoritesUserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B030D8D29949800000AE3AD /* FavoritesUserDefaultsManager.swift */; };
-		4B09D42A2991CEEC00E01DE7 /* TvMazeShowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B09D4292991CEEC00E01DE7 /* TvMazeShowModel.swift */; };
+		4B09D42A2991CEEC00E01DE7 /* PersonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B09D4292991CEEC00E01DE7 /* PersonModel.swift */; };
 		4B4C88522992A5AD0042558D /* ShowDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4C88502992A5AD0042558D /* ShowDetailTableViewCell.swift */; };
 		4B4C88532992A5AD0042558D /* ShowDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B4C88512992A5AD0042558D /* ShowDetailTableViewCell.xib */; };
 		4B4C88552992B2360042558D /* Reactive+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4C88542992B2360042558D /* Reactive+UIViewController.swift */; };
@@ -46,7 +46,6 @@
 		4BAC2F14299359C600BE64E6 /* PeopleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BAC2F12299359C600BE64E6 /* PeopleTableViewCell.xib */; };
 		4BAC2F172993EA2800BE64E6 /* PersonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAC2F162993EA2800BE64E6 /* PersonDetailViewController.swift */; };
 		4BAC2F192993EA3100BE64E6 /* PersonDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAC2F182993EA3100BE64E6 /* PersonDetailViewModel.swift */; };
-		4BDC9F1C29954A8A00CCB8B3 /* TvMazeServiceShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC9F0F29954A8A00CCB8B3 /* TvMazeServiceShow.swift */; };
 		4BDC9F1D29954A8A00CCB8B3 /* TvMazeBaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC9F1029954A8A00CCB8B3 /* TvMazeBaseService.swift */; };
 		4BDC9F1E29954A8A00CCB8B3 /* ServiceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC9F1229954A8A00CCB8B3 /* ServiceRequest.swift */; };
 		4BDC9F1F29954A8A00CCB8B3 /* GetPagedShowsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC9F1429954A8A00CCB8B3 /* GetPagedShowsRequest.swift */; };
@@ -66,11 +65,21 @@
 		4BDC9F402995788200CCB8B3 /* PincodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC9F3F2995788200CCB8B3 /* PincodeViewController.swift */; };
 		4BDC9F422995788A00CCB8B3 /* PincodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC9F412995788A00CCB8B3 /* PincodeViewModel.swift */; };
 		4BDC9F4429957FCA00CCB8B3 /* UITextFieldExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC9F4329957FCA00CCB8B3 /* UITextFieldExtensions.swift */; };
+		4BDC9F492995A93E00CCB8B3 /* ShowListViewModelsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC9F482995A93E00CCB8B3 /* ShowListViewModelsTests.swift */; };
+		4BDC9F4C2995AC8E00CCB8B3 /* ShowModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC9F4B2995AC8E00CCB8B3 /* ShowModels.swift */; };
+		4BDC9F4E2995AE2E00CCB8B3 /* TvMazeServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC9F4D2995AE2E00CCB8B3 /* TvMazeServiceMock.swift */; };
+		4BDC9F502995AF3600CCB8B3 /* ShowsRouterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC9F4F2995AF3600CCB8B3 /* ShowsRouterMock.swift */; };
+		4BDC9F522995B5D800CCB8B3 /* TvShowDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC9F512995B5D800CCB8B3 /* TvShowDetailViewModelTests.swift */; };
+		4BDC9F542995BC3D00CCB8B3 /* EpisodeDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC9F532995BC3D00CCB8B3 /* EpisodeDetailViewModelTests.swift */; };
+		4BDC9F582995BD0B00CCB8B3 /* PeopleListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC9F572995BD0B00CCB8B3 /* PeopleListViewModelTests.swift */; };
+		4BDC9F5A2995BD4E00CCB8B3 /* PeopleRouterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC9F592995BD4E00CCB8B3 /* PeopleRouterMock.swift */; };
+		4BDC9F5D2995C27100CCB8B3 /* PersonDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC9F5C2995C27100CCB8B3 /* PersonDetailViewModelTests.swift */; };
+		4BDC9F602995C43100CCB8B3 /* FavoritesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC9F5F2995C43100CCB8B3 /* FavoritesViewModelTests.swift */; };
+		4BDC9F622995C46400CCB8B3 /* FavoriteRouterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC9F612995C46400CCB8B3 /* FavoriteRouterMock.swift */; };
 		4BDD70DA2991C203001FA9D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDD70D92991C203001FA9D6 /* AppDelegate.swift */; };
 		4BDD70E12991C203001FA9D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BDD70DF2991C203001FA9D6 /* Main.storyboard */; };
 		4BDD70E32991C205001FA9D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BDD70E22991C205001FA9D6 /* Assets.xcassets */; };
 		4BDD70E62991C205001FA9D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BDD70E42991C205001FA9D6 /* LaunchScreen.storyboard */; };
-		4BDD70F12991C205001FA9D6 /* TvMazeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDD70F02991C205001FA9D6 /* TvMazeTests.swift */; };
 		4BDD70FB2991C205001FA9D6 /* TvMazeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDD70FA2991C205001FA9D6 /* TvMazeUITests.swift */; };
 		4BDD70FD2991C205001FA9D6 /* TvMazeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDD70FC2991C205001FA9D6 /* TvMazeUITestsLaunchTests.swift */; };
 		4BF9CDE329952AE000DCE25C /* Reactive+UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF9CDE229952AE000DCE25C /* Reactive+UITableViewCell.swift */; };
@@ -103,7 +112,7 @@
 		4B030D8629949556000AE3AD /* FavoritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewModel.swift; sourceTree = "<group>"; };
 		4B030D8929949586000AE3AD /* FavoriteRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRouter.swift; sourceTree = "<group>"; };
 		4B030D8D29949800000AE3AD /* FavoritesUserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesUserDefaultsManager.swift; sourceTree = "<group>"; };
-		4B09D4292991CEEC00E01DE7 /* TvMazeShowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvMazeShowModel.swift; sourceTree = "<group>"; };
+		4B09D4292991CEEC00E01DE7 /* PersonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonModel.swift; sourceTree = "<group>"; };
 		4B4C88502992A5AD0042558D /* ShowDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailTableViewCell.swift; sourceTree = "<group>"; };
 		4B4C88512992A5AD0042558D /* ShowDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShowDetailTableViewCell.xib; sourceTree = "<group>"; };
 		4B4C88542992B2360042558D /* Reactive+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reactive+UIViewController.swift"; sourceTree = "<group>"; };
@@ -136,7 +145,6 @@
 		4BAC2F12299359C600BE64E6 /* PeopleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PeopleTableViewCell.xib; sourceTree = "<group>"; };
 		4BAC2F162993EA2800BE64E6 /* PersonDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailViewController.swift; sourceTree = "<group>"; };
 		4BAC2F182993EA3100BE64E6 /* PersonDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailViewModel.swift; sourceTree = "<group>"; };
-		4BDC9F0F29954A8A00CCB8B3 /* TvMazeServiceShow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TvMazeServiceShow.swift; sourceTree = "<group>"; };
 		4BDC9F1029954A8A00CCB8B3 /* TvMazeBaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TvMazeBaseService.swift; sourceTree = "<group>"; };
 		4BDC9F1229954A8A00CCB8B3 /* ServiceRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceRequest.swift; sourceTree = "<group>"; };
 		4BDC9F1429954A8A00CCB8B3 /* GetPagedShowsRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetPagedShowsRequest.swift; sourceTree = "<group>"; };
@@ -156,6 +164,17 @@
 		4BDC9F3F2995788200CCB8B3 /* PincodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PincodeViewController.swift; sourceTree = "<group>"; };
 		4BDC9F412995788A00CCB8B3 /* PincodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PincodeViewModel.swift; sourceTree = "<group>"; };
 		4BDC9F4329957FCA00CCB8B3 /* UITextFieldExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtensions.swift; sourceTree = "<group>"; };
+		4BDC9F482995A93E00CCB8B3 /* ShowListViewModelsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowListViewModelsTests.swift; sourceTree = "<group>"; };
+		4BDC9F4B2995AC8E00CCB8B3 /* ShowModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowModels.swift; sourceTree = "<group>"; };
+		4BDC9F4D2995AE2E00CCB8B3 /* TvMazeServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvMazeServiceMock.swift; sourceTree = "<group>"; };
+		4BDC9F4F2995AF3600CCB8B3 /* ShowsRouterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowsRouterMock.swift; sourceTree = "<group>"; };
+		4BDC9F512995B5D800CCB8B3 /* TvShowDetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvShowDetailViewModelTests.swift; sourceTree = "<group>"; };
+		4BDC9F532995BC3D00CCB8B3 /* EpisodeDetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeDetailViewModelTests.swift; sourceTree = "<group>"; };
+		4BDC9F572995BD0B00CCB8B3 /* PeopleListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleListViewModelTests.swift; sourceTree = "<group>"; };
+		4BDC9F592995BD4E00CCB8B3 /* PeopleRouterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleRouterMock.swift; sourceTree = "<group>"; };
+		4BDC9F5C2995C27100CCB8B3 /* PersonDetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailViewModelTests.swift; sourceTree = "<group>"; };
+		4BDC9F5F2995C43100CCB8B3 /* FavoritesViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewModelTests.swift; sourceTree = "<group>"; };
+		4BDC9F612995C46400CCB8B3 /* FavoriteRouterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRouterMock.swift; sourceTree = "<group>"; };
 		4BDD70D62991C203001FA9D6 /* TvMaze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TvMaze.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BDD70D92991C203001FA9D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4BDD70E02991C203001FA9D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -163,7 +182,6 @@
 		4BDD70E52991C205001FA9D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4BDD70E72991C205001FA9D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4BDD70EC2991C205001FA9D6 /* TvMazeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TvMazeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4BDD70F02991C205001FA9D6 /* TvMazeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvMazeTests.swift; sourceTree = "<group>"; };
 		4BDD70F62991C205001FA9D6 /* TvMazeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TvMazeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BDD70FA2991C205001FA9D6 /* TvMazeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvMazeUITests.swift; sourceTree = "<group>"; };
 		4BDD70FC2991C205001FA9D6 /* TvMazeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvMazeUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -219,6 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				4B030D8929949586000AE3AD /* FavoriteRouter.swift */,
+				4BDC9F612995C46400CCB8B3 /* FavoriteRouterMock.swift */,
 			);
 			path = FavoriteRouter;
 			sourceTree = "<group>";
@@ -244,7 +263,7 @@
 		4B09D4282991CEDC00E01DE7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				4B09D4292991CEEC00E01DE7 /* TvMazeShowModel.swift */,
+				4BDC9F4A2995AC8200CCB8B3 /* Show */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -343,6 +362,7 @@
 			isa = PBXGroup;
 			children = (
 				4B66D40D2991D6F100963444 /* ShowsRouter.swift */,
+				4BDC9F4F2995AF3600CCB8B3 /* ShowsRouterMock.swift */,
 			);
 			path = Shows;
 			sourceTree = "<group>";
@@ -411,6 +431,7 @@
 			isa = PBXGroup;
 			children = (
 				4BAC2F0C2993541000BE64E6 /* PeopleRouter.swift */,
+				4BDC9F592995BD4E00CCB8B3 /* PeopleRouterMock.swift */,
 			);
 			path = People;
 			sourceTree = "<group>";
@@ -437,9 +458,9 @@
 			isa = PBXGroup;
 			children = (
 				4BDC9F1129954A8A00CCB8B3 /* ServiceRequest */,
-				4BDC9F0F29954A8A00CCB8B3 /* TvMazeServiceShow.swift */,
 				4BDC9F1029954A8A00CCB8B3 /* TvMazeBaseService.swift */,
 				4BDC9F1B29954A8A00CCB8B3 /* TvMazeService.swift */,
+				4BDC9F4D2995AE2E00CCB8B3 /* TvMazeServiceMock.swift */,
 			);
 			name = Network;
 			path = ../../../Network;
@@ -541,6 +562,52 @@
 			path = Pincode;
 			sourceTree = "<group>";
 		};
+		4BDC9F472995A91600CCB8B3 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				4BDC9F552995BCE200CCB8B3 /* Shows */,
+				4BDC9F562995BCF400CCB8B3 /* People */,
+				4BDC9F5B2995C25B00CCB8B3 /* Favorite */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		4BDC9F4A2995AC8200CCB8B3 /* Show */ = {
+			isa = PBXGroup;
+			children = (
+				4B09D4292991CEEC00E01DE7 /* PersonModel.swift */,
+				4BDC9F4B2995AC8E00CCB8B3 /* ShowModels.swift */,
+			);
+			path = Show;
+			sourceTree = "<group>";
+		};
+		4BDC9F552995BCE200CCB8B3 /* Shows */ = {
+			isa = PBXGroup;
+			children = (
+				4BDC9F482995A93E00CCB8B3 /* ShowListViewModelsTests.swift */,
+				4BDC9F512995B5D800CCB8B3 /* TvShowDetailViewModelTests.swift */,
+				4BDC9F532995BC3D00CCB8B3 /* EpisodeDetailViewModelTests.swift */,
+			);
+			path = Shows;
+			sourceTree = "<group>";
+		};
+		4BDC9F562995BCF400CCB8B3 /* People */ = {
+			isa = PBXGroup;
+			children = (
+				4BDC9F572995BD0B00CCB8B3 /* PeopleListViewModelTests.swift */,
+				4BDC9F5C2995C27100CCB8B3 /* PersonDetailViewModelTests.swift */,
+			);
+			path = People;
+			sourceTree = "<group>";
+		};
+		4BDC9F5B2995C25B00CCB8B3 /* Favorite */ = {
+			isa = PBXGroup;
+			children = (
+				4BDC9F5F2995C43100CCB8B3 /* FavoritesViewModelTests.swift */,
+			);
+			path = Favorite;
+			sourceTree = "<group>";
+		};
 		4BDD70CD2991C202001FA9D6 = {
 			isa = PBXGroup;
 			children = (
@@ -582,7 +649,7 @@
 		4BDD70EF2991C205001FA9D6 /* TvMazeTests */ = {
 			isa = PBXGroup;
 			children = (
-				4BDD70F02991C205001FA9D6 /* TvMazeTests.swift */,
+				4BDC9F472995A91600CCB8B3 /* ViewModels */,
 			);
 			path = TvMazeTests;
 			sourceTree = "<group>";
@@ -892,16 +959,18 @@
 				4B66D4292991EE5200963444 /* UIImageViewExtensions.swift in Sources */,
 				4BDC9F2329954A8A00CCB8B3 /* SearchTvShowsRequest.swift in Sources */,
 				4BDC9F1E29954A8A00CCB8B3 /* ServiceRequest.swift in Sources */,
+				4BDC9F4C2995AC8E00CCB8B3 /* ShowModels.swift in Sources */,
 				4B66D40E2991D6F100963444 /* ShowsRouter.swift in Sources */,
 				4BDC9F2C299566AE00CCB8B3 /* SettingsViewController.swift in Sources */,
 				4BAC2EFF2992DEAA00BE64E6 /* String+DecodingExtension.swift in Sources */,
 				4BDC9F1F29954A8A00CCB8B3 /* GetPagedShowsRequest.swift in Sources */,
-				4BDC9F1C29954A8A00CCB8B3 /* TvMazeServiceShow.swift in Sources */,
 				4BAC2F042992EA9A00BE64E6 /* EpisodeDetailViewController.swift in Sources */,
 				4BAC2F0D2993541000BE64E6 /* PeopleRouter.swift in Sources */,
+				4BDC9F502995AF3600CCB8B3 /* ShowsRouterMock.swift in Sources */,
 				4B4C88522992A5AD0042558D /* ShowDetailTableViewCell.swift in Sources */,
 				4B66D41A2991DB4900963444 /* TvMazeLoadableViewModel.swift in Sources */,
 				4BDD70DA2991C203001FA9D6 /* AppDelegate.swift in Sources */,
+				4BDC9F5A2995BD4E00CCB8B3 /* PeopleRouterMock.swift in Sources */,
 				4BDC9F2029954A8A00CCB8B3 /* GetPeopleRequest.swift in Sources */,
 				4BAC2F172993EA2800BE64E6 /* PersonDetailViewController.swift in Sources */,
 				4BDC9F2929955BE900CCB8B3 /* TvMazeTabBarController.swift in Sources */,
@@ -911,6 +980,7 @@
 				4B030D8A29949586000AE3AD /* FavoriteRouter.swift in Sources */,
 				4B030D8729949556000AE3AD /* FavoritesViewModel.swift in Sources */,
 				4BDC9F31299566D800CCB8B3 /* SettingsRouter.swift in Sources */,
+				4BDC9F4E2995AE2E00CCB8B3 /* TvMazeServiceMock.swift in Sources */,
 				4BDC9F2529954A8A00CCB8B3 /* TvMazeService.swift in Sources */,
 				4B66D41C2991DB5700963444 /* TvMazeBaseViewController.swift in Sources */,
 				4BDC9F2429954A8A00CCB8B3 /* RequestFactory.swift in Sources */,
@@ -930,11 +1000,12 @@
 				4BAC2F192993EA3100BE64E6 /* PersonDetailViewModel.swift in Sources */,
 				4B66D42C29921BD300963444 /* TvShowDetailViewController.swift in Sources */,
 				4BDC9F2129954A8A00CCB8B3 /* GetEpisodesRequest.swift in Sources */,
-				4B09D42A2991CEEC00E01DE7 /* TvMazeShowModel.swift in Sources */,
+				4B09D42A2991CEEC00E01DE7 /* PersonModel.swift in Sources */,
 				4B66D4122991DAA000963444 /* TvMazeShowListViewModel.swift in Sources */,
 				4BDC9F4429957FCA00CCB8B3 /* UITextFieldExtensions.swift in Sources */,
 				4BDC9F36299569F500CCB8B3 /* SecureStoreQueryable.swift in Sources */,
 				4B030D852994954E000AE3AD /* FavoritesViewController.swift in Sources */,
+				4BDC9F622995C46400CCB8B3 /* FavoriteRouterMock.swift in Sources */,
 				4B66D4252991E82200963444 /* ShowListTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -943,7 +1014,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4BDD70F12991C205001FA9D6 /* TvMazeTests.swift in Sources */,
+				4BDC9F602995C43100CCB8B3 /* FavoritesViewModelTests.swift in Sources */,
+				4BDC9F542995BC3D00CCB8B3 /* EpisodeDetailViewModelTests.swift in Sources */,
+				4BDC9F582995BD0B00CCB8B3 /* PeopleListViewModelTests.swift in Sources */,
+				4BDC9F522995B5D800CCB8B3 /* TvShowDetailViewModelTests.swift in Sources */,
+				4BDC9F492995A93E00CCB8B3 /* ShowListViewModelsTests.swift in Sources */,
+				4BDC9F5D2995C27100CCB8B3 /* PersonDetailViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

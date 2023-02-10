@@ -10,7 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class PersonDetailViewController: TvMazeBaseViewController<PersonDetailViewModel> {
+final class PersonDetailViewController: TvMazeBaseViewController<PersonDetailViewModel> {
     @IBOutlet weak var personImageView: UIImageView!
     @IBOutlet weak var showsTableView: UITableView!
     @IBOutlet weak var nameLabel: UILabel!

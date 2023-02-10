@@ -9,7 +9,7 @@ import UIKit
 import RxCocoa
 import RxSwift
 
-class EpisodeDetailViewController: TvMazeBaseViewController<EpisodeDetailViewModel> {
+final class EpisodeDetailViewController: TvMazeBaseViewController<EpisodeDetailViewModel> {
     @IBOutlet weak var episodeImageView: UIImageView!
     @IBOutlet weak var summaryLabel: UILabel!
     @IBOutlet weak var episodeNameLabel: UILabel!

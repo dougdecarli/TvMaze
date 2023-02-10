@@ -8,7 +8,7 @@
 import RxSwift
 import RxCocoa
 
-class TvShowDetailViewModel: TvMazeBaseViewModel<ShowsRouterProtocol> {
+final class TvShowDetailViewModel: TvMazeBaseViewModel<ShowsRouterProtocol> {
     //MARK: Properties
     private var tvShowModel: ShowModel,
                 service: TvMazeServiceProtocol,
@@ -20,7 +20,7 @@ class TvShowDetailViewModel: TvMazeBaseViewModel<ShowsRouterProtocol> {
         onEpisodeSelected = PublishRelay<ShowDetailCellsDataSource>()
     
     var isLoaderShowing = PublishSubject<Bool>()
-    var episodeSeasonCells: Observable<[ShowDetailsSectionModel]> {
+    var showDetailCells: Observable<[ShowDetailsSectionModel]> {
         episodesSeasonSection.asObservable()
     }
     
@@ -42,7 +42,6 @@ class TvShowDetailViewModel: TvMazeBaseViewModel<ShowsRouterProtocol> {
     private func setupOnViewWillAppear() {
         onViewWillAppear
             .do(onNext: { [weak self] in
-//                self?.startLoader()
                 self?.addHeaderCell()
             })
             .subscribe(onNext: { [weak self] in
