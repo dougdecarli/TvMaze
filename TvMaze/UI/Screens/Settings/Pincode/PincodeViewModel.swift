@@ -7,6 +7,7 @@
 
 import RxSwift
 import RxCocoa
+import LocalAuthentication
 
 final class PincodeViewModel: TvMazeBaseViewModel<SettingsRouterProtocol> {
     private let secureStore: SecureStore
@@ -14,7 +15,8 @@ final class PincodeViewModel: TvMazeBaseViewModel<SettingsRouterProtocol> {
         onContinueButtonTouched = PublishRelay<Void>(),
         pinCodeTextFieldString = PublishRelay<String>(),
         dismissViewController = PublishRelay<Void>(),
-        emitError = BehaviorRelay<Bool>(value: false)
+        emitError = BehaviorRelay<Bool>(value: false),
+        onBiometryAuthButtonTouched = PublishRelay<Void>()
     
     var isButtonEnabled: Driver<Bool> {
         setupIsButtonEnabled()
@@ -31,6 +33,7 @@ final class PincodeViewModel: TvMazeBaseViewModel<SettingsRouterProtocol> {
     override func setupBindings() {
         super.setupBindings()
         setupOnContinueButtonTouched()
+        setupOnBiometryAuthButtonTouched()
     }
     
     //MARK: Inputs
@@ -46,7 +49,15 @@ final class PincodeViewModel: TvMazeBaseViewModel<SettingsRouterProtocol> {
             .disposed(by: disposeBag)
     }
     
-    //MARK: Inputs
+    private func setupOnBiometryAuthButtonTouched() {
+        onBiometryAuthButtonTouched
+            .subscribe(onNext: { [weak self] in
+                self?.authenticateWithBiometrics()
+            })
+            .disposed(by: disposeBag)
+    }
+    
+    //MARK: Outputs
     private func setupIsButtonEnabled() -> Driver<Bool> {
         pinCodeTextFieldString
             .startWith("")
@@ -77,5 +88,25 @@ final class PincodeViewModel: TvMazeBaseViewModel<SettingsRouterProtocol> {
     
     private func setErrorMessage() {
         emitError.accept(true)
+    }
+    
+    func authenticateWithBiometrics() {
+        let context = LAContext()
+        var error: NSError?
+        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
+            let reason = "Authenticate with Touch ID / Face ID"
+            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) { [weak self] success, error in
+                if success {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                        self?.dismissViewController.accept(())
+                    }
+                    UserDefaults.standard.set(true, forKey: "biometric")
+                } else {
+                    UserDefaults.standard.set(false, forKey: "biometric")
+                }
+            }
+        } else {
+            UserDefaults.standard.set(false, forKey: "biometric")
+        }
     }
 }

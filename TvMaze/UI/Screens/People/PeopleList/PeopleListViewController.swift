@@ -23,6 +23,7 @@ final class PeopleListViewController: TvMazeBaseViewController<PeopleListViewMod
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        hideKeyboardWhenTappedAround()
         setupTableViewCells()
         bind()
     }

@@ -20,6 +20,8 @@ final class SettingsViewController: TvMazeBaseViewController<SettingsViewModel> 
     override func bindInputs() {
         super.bindInputs()
         
+        pinCodeSwitch.isOn = viewModel.userHasPincode() || UserDefaults.standard.bool(forKey: "biometric")
+        
         pinCodeSwitch.rx.isOn.changed
             .bind(to: viewModel.onSwitchTouched)
             .disposed(by: disposeBag)

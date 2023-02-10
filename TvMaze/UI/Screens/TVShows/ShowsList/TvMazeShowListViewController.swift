@@ -20,6 +20,7 @@ final class TvMazeShowListViewController: TvMazeBaseViewController<TvMazeShowLis
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        hideKeyboardWhenTappedAround()
         setupScreenLayout()
         setupTableViewCells()
         bind()

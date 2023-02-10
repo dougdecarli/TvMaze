@@ -76,6 +76,7 @@
 		4BDC9F5D2995C27100CCB8B3 /* PersonDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC9F5C2995C27100CCB8B3 /* PersonDetailViewModelTests.swift */; };
 		4BDC9F602995C43100CCB8B3 /* FavoritesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC9F5F2995C43100CCB8B3 /* FavoritesViewModelTests.swift */; };
 		4BDC9F622995C46400CCB8B3 /* FavoriteRouterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC9F612995C46400CCB8B3 /* FavoriteRouterMock.swift */; };
+		4BDC9F642995E39B00CCB8B3 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDC9F632995E39B00CCB8B3 /* UIViewControllerExtension.swift */; };
 		4BDD70DA2991C203001FA9D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDD70D92991C203001FA9D6 /* AppDelegate.swift */; };
 		4BDD70E12991C203001FA9D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BDD70DF2991C203001FA9D6 /* Main.storyboard */; };
 		4BDD70E32991C205001FA9D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BDD70E22991C205001FA9D6 /* Assets.xcassets */; };
@@ -175,6 +176,7 @@
 		4BDC9F5C2995C27100CCB8B3 /* PersonDetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailViewModelTests.swift; sourceTree = "<group>"; };
 		4BDC9F5F2995C43100CCB8B3 /* FavoritesViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewModelTests.swift; sourceTree = "<group>"; };
 		4BDC9F612995C46400CCB8B3 /* FavoriteRouterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRouterMock.swift; sourceTree = "<group>"; };
+		4BDC9F632995E39B00CCB8B3 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		4BDD70D62991C203001FA9D6 /* TvMaze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TvMaze.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BDD70D92991C203001FA9D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4BDD70E02991C203001FA9D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -384,6 +386,7 @@
 				4BAC2EFE2992DEAA00BE64E6 /* String+DecodingExtension.swift */,
 				4BF9CDE229952AE000DCE25C /* Reactive+UITableViewCell.swift */,
 				4BDC9F4329957FCA00CCB8B3 /* UITextFieldExtensions.swift */,
+				4BDC9F632995E39B00CCB8B3 /* UIViewControllerExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -986,6 +989,7 @@
 				4BDC9F2429954A8A00CCB8B3 /* RequestFactory.swift in Sources */,
 				4BAC2F022992EA8C00BE64E6 /* EpisodeDetailViewModel.swift in Sources */,
 				4B66D41E2991DB6100963444 /* TvMazeBaseViewModel.swift in Sources */,
+				4BDC9F642995E39B00CCB8B3 /* UIViewControllerExtension.swift in Sources */,
 				4BDC9F34299569A400CCB8B3 /* SecureStore.swift in Sources */,
 				4B66D40C2991D6BF00963444 /* TvMazeStarter.swift in Sources */,
 				4B66D4182991DB3B00963444 /* TvMazeViewControllerProtocol.swift in Sources */,

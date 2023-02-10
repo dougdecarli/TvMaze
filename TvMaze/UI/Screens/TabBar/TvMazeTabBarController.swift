@@ -81,7 +81,7 @@ final class TvMazeTabBarController: UITabBarController {
     @objc private func verifyUserHasPincode() {
         do {
             let pincode = try secureStore.getValue(for: SecureDataType.pinPassword)
-            if pincode != nil {
+            if pincode != nil || UserDefaults.standard.bool(forKey: "biometric") {
                 settingsRouter?.goToPinCodeViewController(isCreatingPinCode: false)
             }
         } catch {}

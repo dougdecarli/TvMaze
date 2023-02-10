@@ -11,10 +11,12 @@ final class PincodeViewController: TvMazeBaseViewController<PincodeViewModel> {
     @IBOutlet weak var pinCodeTextField: UITextField!
     @IBOutlet weak var errorMessageLabel: UILabel!
     @IBOutlet weak var continueButton: UIButton!
+    @IBOutlet weak var biometryButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         bind()
+        hideKeyboardWhenTappedAround()
         isModalInPresentation = !viewModel.isCreatingPinCode
     }
     
@@ -30,6 +32,11 @@ final class PincodeViewController: TvMazeBaseViewController<PincodeViewModel> {
             .subscribe(onNext: { [weak self] in
                 self?.dismissVC()
             })
+            .disposed(by: disposeBag)
+        
+        biometryButton
+            .rx.tap
+            .bind(to: viewModel.onBiometryAuthButtonTouched)
             .disposed(by: disposeBag)
     }
     
@@ -53,6 +60,6 @@ final class PincodeViewController: TvMazeBaseViewController<PincodeViewModel> {
     }
     
     private func dismissVC() {
-        dismiss(animated: true)
+        self.dismiss(animated: true)
     }
 }

@@ -11,7 +11,7 @@ import RxCocoa
 
 final class SettingsViewModel: TvMazeBaseViewModel<SettingsRouterProtocol> {
     private let secureStore: SecureStore
-    lazy var onSwitchTouched = BehaviorRelay<Bool>(value: userHasPincode())
+    lazy var onSwitchTouched = PublishRelay<Bool>()
     
     init(router: SettingsRouterProtocol,
          secureStore: SecureStore) {
@@ -27,7 +27,6 @@ final class SettingsViewModel: TvMazeBaseViewModel<SettingsRouterProtocol> {
     //MARK: Inputs
     private func setupOnSwitchTouched() {
         onSwitchTouched
-            .skip(1)
             .subscribe(onNext: { [weak self] isActiving in
                 guard let self = self else { return }
                 isActiving ?
@@ -37,7 +36,7 @@ final class SettingsViewModel: TvMazeBaseViewModel<SettingsRouterProtocol> {
             .disposed(by: disposeBag)
     }
     
-    private func userHasPincode() -> Bool {
+    func userHasPincode() -> Bool {
         do {
             let pincode = try secureStore.getValue(for: SecureDataType.pinPassword)
             return pincode != nil
