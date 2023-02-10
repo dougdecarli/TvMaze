@@ -92,7 +92,7 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="XYW-OL-s0o">
-                                <rect key="frame" x="0.0" y="243" width="390" height="601"/>
+                                <rect key="frame" x="0.0" y="243" width="390" height="567"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dj2-kX-Il5">
@@ -111,18 +111,18 @@
                         <viewLayoutGuide key="safeArea" id="H6f-9F-FiH"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="XYW-OL-s0o" firstAttribute="top" secondItem="869-g6-i8R" secondAttribute="bottom" constant="12" id="1Jo-6Q-lVZ"/>
-                            <constraint firstAttribute="bottom" secondItem="XYW-OL-s0o" secondAttribute="bottom" id="6Oh-tg-CTQ"/>
+                            <constraint firstItem="XYW-OL-s0o" firstAttribute="leading" secondItem="H6f-9F-FiH" secondAttribute="leading" id="0MW-Mb-uQw"/>
                             <constraint firstItem="H6f-9F-FiH" firstAttribute="trailing" secondItem="869-g6-i8R" secondAttribute="trailing" constant="12" id="KRl-sy-Jzw"/>
                             <constraint firstItem="hzG-Da-vU6" firstAttribute="leading" secondItem="H6f-9F-FiH" secondAttribute="leading" constant="12" id="NUo-f5-CVh"/>
+                            <constraint firstItem="XYW-OL-s0o" firstAttribute="trailing" secondItem="H6f-9F-FiH" secondAttribute="trailing" id="Oub-BR-v5p"/>
                             <constraint firstItem="Dj2-kX-Il5" firstAttribute="centerY" secondItem="hzG-Da-vU6" secondAttribute="centerY" id="VEI-20-OgZ"/>
                             <constraint firstItem="Dj2-kX-Il5" firstAttribute="leading" secondItem="hzG-Da-vU6" secondAttribute="trailing" constant="12" id="XYs-dP-nKW"/>
-                            <constraint firstItem="XYW-OL-s0o" firstAttribute="trailing" secondItem="H6f-9F-FiH" secondAttribute="trailing" id="gvl-yQ-uyg"/>
+                            <constraint firstItem="XYW-OL-s0o" firstAttribute="top" secondItem="869-g6-i8R" secondAttribute="bottom" constant="12" id="did-UZ-Ddi"/>
                             <constraint firstItem="hzG-Da-vU6" firstAttribute="top" secondItem="H6f-9F-FiH" secondAttribute="top" constant="12" id="pBA-Kq-Lb9"/>
                             <constraint firstItem="869-g6-i8R" firstAttribute="top" secondItem="hzG-Da-vU6" secondAttribute="bottom" constant="20" id="qHb-bG-yjN"/>
                             <constraint firstItem="869-g6-i8R" firstAttribute="leading" secondItem="H6f-9F-FiH" secondAttribute="leading" constant="12" id="t0V-Rd-sNC"/>
-                            <constraint firstItem="XYW-OL-s0o" firstAttribute="leading" secondItem="H6f-9F-FiH" secondAttribute="leading" id="tcf-Sz-B0a"/>
                             <constraint firstItem="H6f-9F-FiH" firstAttribute="trailing" secondItem="Dj2-kX-Il5" secondAttribute="trailing" constant="12" id="vcS-Sy-Thw"/>
+                            <constraint firstItem="XYW-OL-s0o" firstAttribute="bottom" secondItem="H6f-9F-FiH" secondAttribute="bottom" id="wxD-vQ-May"/>
                         </constraints>
                     </view>
                     <connections>
