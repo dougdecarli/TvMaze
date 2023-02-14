@@ -9,6 +9,20 @@ import RxSwift
 import RxCocoa
 import SwiftyJSON
 
+enum ServiceErrors: Error {
+    case notFound
+    case defaultError
+    
+    init(statusCode: Int) {
+        switch statusCode {
+        case 404:
+            self = .notFound
+        default:
+            self = .defaultError
+        }
+    }
+}
+
 class TvMazeBaseService {
     private let decoder: JSONDecoder
     private var task: URLSessionTask?
