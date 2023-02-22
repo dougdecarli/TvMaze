@@ -1,7 +1,4 @@
 # TvMaze
-This project contains an iOS coding challenge to Jobsity. 
-
-All the mandatory and bonus features were implemented, including unit tests.
 
 # Archtecture
 MVVM + RxSwift
