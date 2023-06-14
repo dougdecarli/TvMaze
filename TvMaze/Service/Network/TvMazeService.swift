@@ -29,16 +29,31 @@ class TvMazeService: TvMazeBaseService, TvMazeServiceProtocol {
     
     func searchTvShows(search: String) -> Observable<[ShowModel]> {
         request(RequestFactory.buildSearchShowsRequest(search: search),
-                responseType: [ShowModel].self)
+                responseType: [SearchedShow].self)
+        .map { searchShows in
+            searchShows.map { searchedShow -> ShowModel in
+                searchedShow.show
+            }
+        }
     }
     
     func getPeople(by name: String) -> Observable<[Person]> {
         request(RequestFactory.buildGetPeopleRequest(name: name),
-                responseType: [Person].self)
+                responseType: [SearchedPerson].self)
+        .map { searchPeople in
+            searchPeople.map { searchedPerson -> Person in
+                searchedPerson.person
+            }
+        }
     }
     
     func getShowsByPerson(personId: Int) -> Observable<[ShowModel]> {
         request(RequestFactory.buildGetShowsByPersonRequest(personId: personId),
-                responseType: [ShowModel].self)
+                responseType: [CastResult].self)
+        .map { castResults in
+            castResults.map { castResult -> ShowModel in
+                castResult.embedded.show
+            }
+        }
     }
 }

@@ -11,6 +11,6 @@ struct GetEpisodesRequest: ServiceRequest {
     var endpoint: String
     
     init(showId: Int) {
-        self.endpoint = "\(showId)/episodes"
+        self.endpoint = "shows/\(showId)/episodes"
     }
 }
