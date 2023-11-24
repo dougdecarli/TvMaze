@@ -1,7 +1,7 @@
 # TvMaze
 
 # Archtecture
-MVVM + RxSwift
+MVVM + RxSwift with Unit Tests
 
 # Screenshots
 ![Captura de Tela 2023-02-09 às 23 41 52](https://user-images.githubusercontent.com/33814261/217987733-ed81d112-1a5d-4337-ad86-a59bc6ff8c98.png)
